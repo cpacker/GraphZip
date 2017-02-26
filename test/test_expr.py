@@ -164,7 +164,7 @@ class TestExamples(unittest.TestCase):
         self.assertNotEqual(self.c.P, [])
 
 
-@unittest.skip("Non-standard test")
+# @unittest.skip("Non-standard test")
 class TestGraphZipSubgen(unittest.TestCase):
     """ Test GraphZip on graphs and ground-truth files created via Subgen
 
@@ -211,13 +211,13 @@ class TestGraphZipSubgen(unittest.TestCase):
         print('Running compression on %s...' % fin_graphzip)
         start = time.perf_counter()
         # run compression to get pattern dictionary
-        self.c.compress_file(GRAPH_DIR + fin_graphzip)
+        self.c.compress_file(fin_graphzip)
         elapsed = time.perf_counter()-start
         print('Compression took:')
         print(elapsed)
 
         # collect y and y_hat
-        gt_gs = import_insts(GRAPH_DIR + fin_insts)
+        gt_gs = import_insts(fin_insts)
         graphzip_gs = [g for (g, _, _) in self.c.P]
 
         # trim the pattern dictionary e.g. to match the #patterns Subdue found
