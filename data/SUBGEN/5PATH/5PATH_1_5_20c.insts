@@ -1,0 +1,2295 @@
+Instance 215 {
+% Deviations from substructure:
+%
+%   delete vertex: v 788 v3
+%   delete edge:   e e2 859 590  (secondary)
+%   delete edge:   e e3 788 787
+%   delete vertex: v 787 v4  (secondary)
+v 1000 v1
+v 999 v2
+e e1 1000 999
+}
+
+Instance 214 {
+v 998 v1
+v 997 v2
+v 996 v3
+v 995 v4
+e e1 998 997
+e e2 997 996
+e e3 996 995
+}
+
+Instance 213 {
+% Deviations from substructure:
+%
+%   delete vertex: v 852 v1
+%   delete edge:   e e1 852 851  (secondary)
+v 994 v2
+v 993 v3
+v 992 v4
+e e2 994 993
+e e3 993 992
+}
+
+Instance 212 {
+v 991 v1
+v 990 v2
+v 989 v3
+v 988 v4
+e e1 991 990
+e e2 990 989
+e e3 989 988
+}
+
+Instance 211 {
+v 987 v1
+v 986 v2
+v 985 v3
+v 984 v4
+e e1 987 986
+e e2 986 985
+e e3 985 984
+}
+
+Instance 210 {
+% Deviations from substructure:
+%
+%   delete vertex: v 838 v3
+%   delete edge:   e e3 838 837  (secondary)
+%   delete edge:   e e2 839 838  (secondary)
+%   delete vertex: v 524 v4  (secondary)
+v 983 v1
+v 982 v2
+e e1 983 982
+}
+
+Instance 209 {
+% Deviations from substructure:
+%
+%   delete vertex: v 836 v1
+%   delete edge:   e e1 836 835  (secondary)
+v 981 v2
+v 980 v3
+v 979 v4
+e e2 981 980
+e e3 980 979
+}
+
+Instance 208 {
+% Deviations from substructure:
+%
+%   delete vertex: v 525 v3
+%   delete edge:   e e3 794 829  (secondary)
+%   delete edge:   e e2 579 794  (secondary)
+%   delete vertex: v 829 v4  (secondary)
+v 978 v1
+v 977 v2
+e e1 978 977
+}
+
+Instance 207 {
+v 976 v1
+v 975 v2
+v 974 v3
+v 973 v4
+e e1 976 975
+e e2 975 974
+e e3 974 973
+}
+
+Instance 206 {
+v 978 v1
+v 977 v2
+v 972 v3
+v 971 v4
+e e1 978 977
+e e2 977 972
+e e3 972 971
+}
+
+Instance 205 {
+% Deviations from substructure:
+%
+%   delete edge:   e e1 852 819
+%   delete vertex: v 852 v1  (secondary)
+v 970 v2
+v 969 v3
+v 968 v4
+e e2 970 969
+e e3 969 968
+}
+
+Instance 204 {
+v 967 v1
+v 966 v2
+v 965 v3
+v 964 v4
+e e1 967 966
+e e2 966 965
+e e3 965 964
+}
+
+Instance 203 {
+v 963 v1
+v 962 v2
+v 961 v3
+v 960 v4
+e e1 963 962
+e e2 962 961
+e e3 961 960
+}
+
+Instance 202 {
+v 959 v1
+v 958 v2
+v 957 v3
+v 956 v4
+e e1 959 958
+e e2 958 957
+e e3 957 956
+}
+
+Instance 201 {
+v 955 v1
+v 954 v2
+v 953 v3
+v 952 v4
+e e1 955 954
+e e2 954 953
+e e3 953 952
+}
+
+Instance 200 {
+v 951 v1
+v 950 v2
+v 949 v3
+v 948 v4
+e e1 951 950
+e e2 950 949
+e e3 949 948
+}
+
+Instance 199 {
+% Deviations from substructure:
+%
+%   delete vertex: v 525 v3
+%   delete edge:   e e3 794 793  (secondary)
+%   delete edge:   e e2 795 794  (secondary)
+%   delete vertex: v 793 v4  (secondary)
+v 976 v1
+v 975 v2
+e e1 976 975
+}
+
+Instance 198 {
+% Deviations from substructure:
+%
+%   delete vertex: v 386 v3
+%   delete edge:   e e3 386 385  (secondary)
+%   delete edge:   e e2 791 386  (secondary)
+%   delete vertex: v 385 v4  (secondary)
+v 947 v1
+v 946 v2
+e e1 947 946
+}
+
+Instance 197 {
+% Deviations from substructure:
+%
+%   delete vertex: v 311 v2
+%   delete edge:   e e2 311 310  (secondary)
+%   delete edge:   e e1 788 311  (secondary)
+%   delete vertex: v 788 v1  (secondary)
+v 945 v3
+v 944 v4
+e e3 945 944
+}
+
+Instance 196 {
+v 943 v1
+v 942 v2
+v 941 v3
+v 940 v4
+e e1 943 942
+e e2 942 941
+e e3 941 940
+}
+
+Instance 195 {
+% Deviations from substructure:
+%
+%   delete vertex: v 779 v2
+%   delete edge:   e e2 779 102  (secondary)
+%   delete edge:   e e1 780 779  (secondary)
+%   delete vertex: v 780 v1  (secondary)
+v 939 v3
+v 938 v4
+e e3 939 938
+}
+
+Instance 194 {
+v 937 v1
+v 936 v2
+v 935 v3
+v 934 v4
+e e1 937 936
+e e2 936 935
+e e3 935 934
+}
+
+Instance 193 {
+v 933 v1
+v 932 v2
+v 931 v3
+v 930 v4
+e e1 933 932
+e e2 932 931
+e e3 931 930
+}
+
+Instance 192 {
+% Deviations from substructure:
+%
+%   delete vertex: v 788 v3
+%   delete edge:   e e2 767 590  (secondary)
+%   delete edge:   e e3 788 787
+%   delete vertex: v 787 v4  (secondary)
+v 998 v1
+v 997 v2
+e e1 998 997
+}
+
+Instance 191 {
+v 929 v1
+v 928 v2
+v 927 v3
+v 926 v4
+e e1 929 928
+e e2 928 927
+e e3 927 926
+}
+
+Instance 190 {
+% Deviations from substructure:
+%
+%   delete vertex: v 836 v1
+%   delete edge:   e e1 836 759  (secondary)
+v 925 v2
+v 924 v3
+v 923 v4
+e e2 925 924
+e e3 924 923
+}
+
+Instance 189 {
+v 922 v1
+v 921 v2
+v 920 v3
+v 919 v4
+e e1 922 921
+e e2 921 920
+e e3 920 919
+}
+
+Instance 188 {
+% Deviations from substructure:
+%
+%   delete vertex: v 751 v2
+%   delete edge:   e e2 751 750  (secondary)
+%   delete edge:   e e1 752 751  (secondary)
+%   delete vertex: v 752 v1  (secondary)
+v 918 v3
+v 917 v4
+e e3 918 917
+}
+
+Instance 187 {
+v 916 v1
+v 942 v2
+v 941 v3
+v 915 v4
+e e1 916 942
+e e2 942 941
+e e3 941 915
+}
+
+Instance 186 {
+% Deviations from substructure:
+%
+%   delete vertex: v 918 v3
+%   delete edge:   e e3 750 741  (secondary)
+%   delete edge:   e e2 327 750  (secondary)
+%   delete vertex: v 741 v4  (secondary)
+v 914 v1
+v 913 v2
+e e1 914 913
+}
+
+Instance 185 {
+% Deviations from substructure:
+%
+%   delete edge:   e e3 738 737
+%   delete vertex: v 737 v4  (secondary)
+v 912 v1
+v 911 v2
+v 910 v3
+e e1 912 911
+e e2 911 910
+}
+
+Instance 184 {
+v 909 v1
+v 908 v2
+v 907 v3
+v 906 v4
+e e1 909 908
+e e2 908 907
+e e3 907 906
+}
+
+Instance 183 {
+v 905 v1
+v 904 v2
+v 903 v3
+v 902 v4
+e e1 905 904
+e e2 904 903
+e e3 903 902
+}
+
+Instance 182 {
+v 901 v1
+v 900 v2
+v 899 v3
+v 898 v4
+e e1 901 900
+e e2 900 899
+e e3 899 898
+}
+
+Instance 181 {
+% Deviations from substructure:
+%
+%   delete vertex: v 525 v3
+%   delete edge:   e e3 794 721  (secondary)
+%   delete edge:   e e2 579 794  (secondary)
+%   delete vertex: v 721 v4  (secondary)
+v 897 v1
+v 977 v2
+e e1 897 977
+}
+
+Instance 180 {
+v 896 v1
+v 895 v2
+v 894 v3
+v 893 v4
+e e1 896 895
+e e2 895 894
+e e3 894 893
+}
+
+Instance 179 {
+v 892 v1
+v 891 v2
+v 890 v3
+v 889 v4
+e e1 892 891
+e e2 891 890
+e e3 890 889
+}
+
+Instance 178 {
+v 888 v1
+v 887 v2
+v 886 v3
+v 885 v4
+e e1 888 887
+e e2 887 886
+e e3 886 885
+}
+
+Instance 177 {
+v 884 v1
+v 883 v2
+v 882 v3
+v 881 v4
+e e1 884 883
+e e2 883 882
+e e3 882 881
+}
+
+Instance 176 {
+v 880 v1
+v 879 v2
+v 878 v3
+v 877 v4
+e e1 880 879
+e e2 879 878
+e e3 878 877
+}
+
+Instance 175 {
+v 876 v1
+v 875 v2
+v 874 v3
+v 873 v4
+e e1 876 875
+e e2 875 874
+e e3 874 873
+}
+
+Instance 174 {
+v 872 v1
+v 871 v2
+v 870 v3
+v 869 v4
+e e1 872 871
+e e2 871 870
+e e3 870 869
+}
+
+Instance 173 {
+v 868 v1
+v 867 v2
+v 866 v3
+v 865 v4
+e e1 868 867
+e e2 867 866
+e e3 866 865
+}
+
+Instance 172 {
+% Deviations from substructure:
+%
+%   delete vertex: v 788 v3
+%   delete edge:   e e3 590 685  (secondary)
+%   delete edge:   e e2 491 590  (secondary)
+%   delete vertex: v 656 v4  (secondary)
+v 864 v1
+v 863 v2
+e e1 864 863
+}
+
+Instance 171 {
+v 862 v1
+v 861 v2
+v 860 v3
+v 859 v4
+e e1 862 861
+e e2 861 860
+e e3 860 859
+}
+
+Instance 170 {
+v 858 v1
+v 857 v2
+v 856 v3
+v 855 v4
+e e1 858 857
+e e2 857 856
+e e3 856 855
+}
+
+Instance 169 {
+% Deviations from substructure:
+%
+%   delete vertex: v 676 v1
+%   delete edge:   e e1 676 691  (secondary)
+v 867 v2
+v 866 v3
+v 854 v4
+e e2 867 866
+e e3 866 854
+}
+
+Instance 168 {
+% Deviations from substructure:
+%
+%   delete vertex: v 918 v3
+%   delete edge:   e e3 918 845  (secondary)
+%   delete edge:   e e2 811 750  (secondary)
+%   delete vertex: v 845 v4  (secondary)
+v 963 v1
+v 962 v2
+e e1 963 962
+}
+
+Instance 167 {
+v 853 v1
+v 852 v2
+v 851 v3
+v 850 v4
+e e1 853 852
+e e2 852 851
+e e3 851 850
+}
+
+Instance 166 {
+% Deviations from substructure:
+%
+%   delete vertex: v 663 v2
+%   delete edge:   e e2 663 662  (secondary)
+%   delete edge:   e e1 664 663  (secondary)
+%   delete vertex: v 664 v1  (secondary)
+v 849 v3
+v 848 v4
+e e3 849 848
+}
+
+Instance 165 {
+v 847 v1
+v 846 v2
+v 924 v3
+v 845 v4
+e e1 847 846
+e e2 846 924
+e e3 924 845
+}
+
+Instance 164 {
+v 844 v1
+v 843 v2
+v 842 v3
+v 841 v4
+e e1 844 843
+e e2 843 842
+e e3 842 841
+}
+
+Instance 163 {
+v 840 v1
+v 839 v2
+v 838 v3
+v 837 v4
+e e1 840 839
+e e2 839 838
+e e3 838 837
+}
+
+Instance 162 {
+v 836 v1
+v 835 v2
+v 860 v3
+v 859 v4
+e e1 836 835
+e e2 835 860
+e e3 860 859
+}
+
+Instance 161 {
+% Deviations from substructure:
+%
+%   delete vertex: v 836 v1
+%   delete edge:   e e1 836 519  (secondary)
+v 834 v2
+v 833 v3
+v 832 v4
+e e2 834 833
+e e3 833 832
+}
+
+Instance 160 {
+v 831 v1
+v 830 v2
+v 829 v3
+v 828 v4
+e e1 831 830
+e e2 830 829
+e e3 829 828
+}
+
+Instance 159 {
+v 827 v1
+v 826 v2
+v 825 v3
+v 824 v4
+e e1 827 826
+e e2 826 825
+e e3 825 824
+}
+
+Instance 158 {
+v 823 v1
+v 822 v2
+v 894 v3
+v 821 v4
+e e1 823 822
+e e2 822 894
+e e3 894 821
+}
+
+Instance 157 {
+v 820 v1
+v 819 v2
+v 818 v3
+v 817 v4
+e e1 820 819
+e e2 819 818
+e e3 818 817
+}
+
+Instance 156 {
+v 816 v1
+v 815 v2
+v 814 v3
+v 813 v4
+e e1 816 815
+e e2 815 814
+e e3 814 813
+}
+
+Instance 155 {
+v 812 v1
+v 811 v2
+v 810 v3
+v 809 v4
+e e1 812 811
+e e2 811 810
+e e3 810 809
+}
+
+Instance 154 {
+v 808 v1
+v 807 v2
+v 806 v3
+v 805 v4
+e e1 808 807
+e e2 807 806
+e e3 806 805
+}
+
+Instance 153 {
+v 804 v1
+v 803 v2
+v 802 v3
+v 801 v4
+e e1 804 803
+e e2 803 802
+e e3 802 801
+}
+
+Instance 152 {
+v 800 v1
+v 799 v2
+v 798 v3
+v 797 v4
+e e1 800 799
+e e2 799 798
+e e3 798 797
+}
+
+Instance 151 {
+% Deviations from substructure:
+%
+%   delete vertex: v 525 v3
+%   delete edge:   e e3 525 524  (secondary)
+%   delete edge:   e e2 603 794  (secondary)
+%   delete vertex: v 524 v4  (secondary)
+v 820 v1
+v 796 v2
+e e1 820 796
+}
+
+Instance 150 {
+% Deviations from substructure:
+%
+%   delete edge:   e e1 600 599
+%   delete vertex: v 600 v1  (secondary)
+v 795 v2
+v 794 v3
+v 793 v4
+e e2 795 794
+e e3 794 793
+}
+
+Instance 149 {
+v 792 v1
+v 791 v2
+v 790 v3
+v 789 v4
+e e1 792 791
+e e2 791 790
+e e3 790 789
+}
+
+Instance 148 {
+% Deviations from substructure:
+%
+%   delete vertex: v 591 v2
+%   delete edge:   e e2 591 590  (secondary)
+%   delete edge:   e e1 592 591  (secondary)
+%   delete vertex: v 592 v1  (secondary)
+v 788 v3
+v 787 v4
+e e3 788 787
+}
+
+Instance 147 {
+% Deviations from substructure:
+%
+%   delete vertex: v 741 v4
+%   delete edge:   e e3 586 741  (secondary)
+v 892 v1
+v 891 v2
+v 786 v3
+e e1 892 891
+e e2 891 786
+}
+
+Instance 146 {
+v 785 v1
+v 784 v2
+v 783 v3
+v 782 v4
+e e1 785 784
+e e2 784 783
+e e3 783 782
+}
+
+Instance 145 {
+% Deviations from substructure:
+%
+%   delete vertex: v 525 v3
+%   delete edge:   e e3 794 577  (secondary)
+%   delete edge:   e e2 579 794  (secondary)
+%   delete vertex: v 577 v4  (secondary)
+v 781 v1
+v 977 v2
+e e1 781 977
+}
+
+Instance 144 {
+% Deviations from substructure:
+%
+%   delete vertex: v 573 v4
+%   delete edge:   e e3 574 573  (secondary)
+v 780 v1
+v 834 v2
+v 779 v3
+e e1 780 834
+e e2 834 779
+}
+
+Instance 143 {
+% Deviations from substructure:
+%
+%   delete edge:   e e3 570 569
+%   delete vertex: v 569 v4  (secondary)
+v 778 v1
+v 777 v2
+v 776 v3
+e e1 778 777
+e e2 777 776
+}
+
+Instance 142 {
+v 775 v1
+v 774 v2
+v 773 v3
+v 772 v4
+e e1 775 774
+e e2 774 773
+e e3 773 772
+}
+
+Instance 141 {
+% Deviations from substructure:
+%
+%   delete vertex: v 836 v1
+%   delete edge:   e e1 836 519  (secondary)
+v 834 v2
+v 918 v3
+v 845 v4
+e e2 834 918
+e e3 918 845
+}
+
+Instance 140 {
+v 771 v1
+v 770 v2
+v 769 v3
+v 782 v4
+e e1 771 770
+e e2 770 769
+e e3 769 782
+}
+
+Instance 139 {
+% Deviations from substructure:
+%
+%   delete vertex: v 946 v2
+%   delete edge:   e e2 791 106  (secondary)
+%   delete edge:   e e1 947 946  (secondary)
+%   delete vertex: v 947 v1  (secondary)
+v 768 v3
+v 767 v4
+e e3 768 767
+}
+
+Instance 138 {
+v 766 v1
+v 765 v2
+v 764 v3
+v 763 v4
+e e1 766 765
+e e2 765 764
+e e3 764 763
+}
+
+Instance 137 {
+% Deviations from substructure:
+%
+%   delete vertex: v 548 v1
+%   delete edge:   e e1 548 547  (secondary)
+v 762 v2
+v 957 v3
+v 956 v4
+e e2 762 957
+e e3 957 956
+}
+
+Instance 136 {
+v 761 v1
+v 760 v2
+v 759 v3
+v 758 v4
+e e1 761 760
+e e2 760 759
+e e3 759 758
+}
+
+Instance 135 {
+% Deviations from substructure:
+%
+%   delete edge:   e e1 540 539
+%   delete vertex: v 540 v1  (secondary)
+v 757 v2
+v 756 v3
+v 755 v4
+e e2 757 756
+e e3 756 755
+}
+
+Instance 134 {
+v 754 v1
+v 753 v2
+v 752 v3
+v 751 v4
+e e1 754 753
+e e2 753 752
+e e3 752 751
+}
+
+Instance 133 {
+v 750 v1
+v 749 v2
+v 802 v3
+v 748 v4
+e e1 750 749
+e e2 749 802
+e e3 802 748
+}
+
+Instance 132 {
+% Deviations from substructure:
+%
+%   delete edge:   e e1 528 651
+%   delete vertex: v 528 v1  (secondary)
+v 839 v2
+v 838 v3
+v 747 v4
+e e2 839 838
+e e3 838 747
+}
+
+Instance 131 {
+% Deviations from substructure:
+%
+%   delete vertex: v 852 v1
+%   delete edge:   e e1 852 211  (secondary)
+v 746 v2
+v 745 v3
+v 744 v4
+e e2 746 745
+e e3 745 744
+}
+
+Instance 130 {
+v 743 v1
+v 834 v2
+v 742 v3
+v 741 v4
+e e1 743 834
+e e2 834 742
+e e3 742 741
+}
+
+Instance 129 {
+% Deviations from substructure:
+%
+%   delete vertex: v 514 v3
+%   delete edge:   e e3 514 513  (secondary)
+%   delete edge:   e e2 487 514  (secondary)
+%   delete vertex: v 513 v4  (secondary)
+v 740 v1
+v 739 v2
+e e1 740 739
+}
+
+Instance 128 {
+v 738 v1
+v 891 v2
+v 737 v3
+v 736 v4
+e e1 738 891
+e e2 891 737
+e e3 737 736
+}
+
+Instance 127 {
+% Deviations from substructure:
+%
+%   delete vertex: v 506 v3
+%   delete edge:   e e3 506 505  (secondary)
+%   delete edge:   e e2 359 506  (secondary)
+%   delete vertex: v 944 v4  (secondary)
+v 735 v1
+v 734 v2
+e e1 735 734
+}
+
+Instance 126 {
+v 733 v1
+v 732 v2
+v 731 v3
+v 730 v4
+e e1 733 732
+e e2 732 731
+e e3 731 730
+}
+
+Instance 125 {
+v 729 v1
+v 728 v2
+v 727 v3
+v 726 v4
+e e1 729 728
+e e2 728 727
+e e3 727 726
+}
+
+Instance 124 {
+% Deviations from substructure:
+%
+%   delete vertex: v 495 v2
+%   delete edge:   e e2 495 494  (secondary)
+%   delete edge:   e e1 496 495  (secondary)
+%   delete vertex: v 496 v1  (secondary)
+v 725 v3
+v 782 v4
+e e3 725 782
+}
+
+Instance 123 {
+v 864 v1
+v 863 v2
+v 924 v3
+v 845 v4
+e e1 864 863
+e e2 863 924
+e e3 924 845
+}
+
+Instance 122 {
+v 740 v1
+v 739 v2
+v 724 v3
+v 723 v4
+e e1 740 739
+e e2 739 724
+e e3 724 723
+}
+
+Instance 121 {
+v 722 v1
+v 721 v2
+v 931 v3
+v 930 v4
+e e1 722 721
+e e2 721 931
+e e3 931 930
+}
+
+Instance 120 {
+% Deviations from substructure:
+%
+%   delete vertex: v 479 v2
+%   delete edge:   e e2 479 478  (secondary)
+%   delete edge:   e e1 480 479  (secondary)
+%   delete vertex: v 480 v1  (secondary)
+v 720 v3
+v 719 v4
+e e3 720 719
+}
+
+Instance 119 {
+v 718 v1
+v 811 v2
+v 931 v3
+v 717 v4
+e e1 718 811
+e e2 811 931
+e e3 931 717
+}
+
+Instance 118 {
+v 716 v1
+v 715 v2
+v 714 v3
+v 713 v4
+e e1 716 715
+e e2 715 714
+e e3 714 713
+}
+
+Instance 117 {
+v 712 v1
+v 711 v2
+v 710 v3
+v 709 v4
+e e1 712 711
+e e2 711 710
+e e3 710 709
+}
+
+Instance 116 {
+% Deviations from substructure:
+%
+%   delete vertex: v 506 v3
+%   delete edge:   e e3 506 461  (secondary)
+%   delete edge:   e e2 39 506  (secondary)
+%   delete vertex: v 461 v4  (secondary)
+v 708 v1
+v 707 v2
+e e1 708 707
+}
+
+Instance 115 {
+v 706 v1
+v 705 v2
+v 704 v3
+v 703 v4
+e e1 706 705
+e e2 705 704
+e e3 704 703
+}
+
+Instance 114 {
+v 702 v1
+v 701 v2
+v 700 v3
+v 699 v4
+e e1 702 701
+e e2 701 700
+e e3 700 699
+}
+
+Instance 113 {
+% Deviations from substructure:
+%
+%   delete vertex: v 452 v1
+%   delete edge:   e e1 452 71  (secondary)
+v 698 v2
+v 697 v3
+v 696 v4
+e e2 698 697
+e e3 697 696
+}
+
+Instance 112 {
+v 695 v1
+v 694 v2
+v 802 v3
+v 693 v4
+e e1 695 694
+e e2 694 802
+e e3 802 693
+}
+
+Instance 111 {
+v 692 v1
+v 839 v2
+v 838 v3
+v 691 v4
+e e1 692 839
+e e2 839 838
+e e3 838 691
+}
+
+Instance 110 {
+% Deviations from substructure:
+%
+%   delete vertex: v 525 v3
+%   delete edge:   e e3 794 793  (secondary)
+%   delete edge:   e e2 579 794  (secondary)
+%   delete vertex: v 793 v4  (secondary)
+v 722 v1
+v 977 v2
+e e1 722 977
+}
+
+Instance 109 {
+% Deviations from substructure:
+%
+%   delete vertex: v 433 v4
+%   delete edge:   e e3 434 433  (secondary)
+v 690 v1
+v 689 v2
+v 688 v3
+e e1 690 689
+e e2 689 688
+}
+
+Instance 108 {
+% Deviations from substructure:
+%
+%   delete vertex: v 495 v2
+%   delete edge:   e e2 495 302  (secondary)
+%   delete edge:   e e1 432 495  (secondary)
+%   delete vertex: v 432 v1  (secondary)
+v 687 v3
+v 686 v4
+e e3 687 686
+}
+
+Instance 107 {
+v 685 v1
+v 684 v2
+v 683 v3
+v 682 v4
+e e1 685 684
+e e2 684 683
+e e3 683 682
+}
+
+Instance 106 {
+% Deviations from substructure:
+%
+%   delete edge:   e e1 424 423
+%   delete vertex: v 424 v1  (secondary)
+v 681 v2
+v 714 v3
+v 713 v4
+e e2 681 714
+e e3 714 713
+}
+
+Instance 105 {
+v 680 v1
+v 679 v2
+v 678 v3
+v 677 v4
+e e1 680 679
+e e2 679 678
+e e3 678 677
+}
+
+Instance 104 {
+% Deviations from substructure:
+%
+%   delete vertex: v 416 v1
+%   delete edge:   e e1 416 415  (secondary)
+v 811 v2
+v 810 v3
+v 676 v4
+e e2 811 810
+e e3 810 676
+}
+
+Instance 103 {
+v 675 v1
+v 674 v2
+v 673 v3
+v 672 v4
+e e1 675 674
+e e2 674 673
+e e3 673 672
+}
+
+Instance 102 {
+v 671 v1
+v 997 v2
+v 996 v3
+v 670 v4
+e e1 671 997
+e e2 997 996
+e e3 996 670
+}
+
+Instance 101 {
+v 718 v1
+v 811 v2
+v 810 v3
+v 669 v4
+e e1 718 811
+e e2 811 810
+e e3 810 669
+}
+
+Instance 100 {
+v 668 v1
+v 981 v2
+v 980 v3
+v 667 v4
+e e1 668 981
+e e2 981 980
+e e3 980 667
+}
+
+Instance 99 {
+v 666 v1
+v 665 v2
+v 664 v3
+v 663 v4
+e e1 666 665
+e e2 665 664
+e e3 664 663
+}
+
+Instance 98 {
+v 662 v1
+v 661 v2
+v 660 v3
+v 659 v4
+e e1 662 661
+e e2 661 660
+e e3 660 659
+}
+
+Instance 97 {
+% Deviations from substructure:
+%
+%   delete vertex: v 386 v3
+%   delete edge:   e e3 386 385  (secondary)
+%   delete edge:   e e2 387 386  (secondary)
+%   delete vertex: v 385 v4  (secondary)
+v 912 v1
+v 911 v2
+e e1 912 911
+}
+
+Instance 96 {
+v 658 v1
+v 977 v2
+v 657 v3
+v 656 v4
+e e1 658 977
+e e2 977 657
+e e3 657 656
+}
+
+Instance 95 {
+% Deviations from substructure:
+%
+%   delete edge:   e e1 380 511
+%   delete vertex: v 862 v1  (secondary)
+v 891 v2
+v 737 v3
+v 655 v4
+e e2 891 737
+e e3 737 655
+}
+
+Instance 94 {
+v 654 v1
+v 653 v2
+v 965 v3
+v 758 v4
+e e1 654 653
+e e2 653 965
+e e3 965 758
+}
+
+Instance 93 {
+v 652 v1
+v 651 v2
+v 650 v3
+v 649 v4
+e e1 652 651
+e e2 651 650
+e e3 650 649
+}
+
+Instance 92 {
+v 722 v1
+v 977 v2
+v 657 v3
+v 782 v4
+e e1 722 977
+e e2 977 657
+e e3 657 782
+}
+
+Instance 91 {
+v 648 v1
+v 647 v2
+v 646 v3
+v 645 v4
+e e1 648 647
+e e2 647 646
+e e3 646 645
+}
+
+Instance 90 {
+% Deviations from substructure:
+%
+%   delete vertex: v 358 v3
+%   delete edge:   e e3 358 425  (secondary)
+%   delete edge:   e e2 359 358  (secondary)
+%   delete vertex: v 682 v4  (secondary)
+v 831 v1
+v 734 v2
+e e1 831 734
+}
+
+Instance 89 {
+% Deviations from substructure:
+%
+%   delete vertex: v 354 v3
+%   delete edge:   e e3 354 353  (secondary)
+%   delete edge:   e e2 355 354  (secondary)
+%   delete vertex: v 353 v4  (secondary)
+v 644 v1
+v 643 v2
+e e1 644 643
+}
+
+Instance 88 {
+v 743 v1
+v 642 v2
+v 650 v3
+v 641 v4
+e e1 743 642
+e e2 642 650
+e e3 650 641
+}
+
+Instance 87 {
+v 722 v1
+v 977 v2
+v 640 v3
+v 639 v4
+e e1 722 977
+e e2 977 640
+e e3 640 639
+}
+
+Instance 86 {
+% Deviations from substructure:
+%
+%   delete edge:   e e1 204 203
+%   delete vertex: v 652 v1  (secondary)
+v 638 v2
+v 637 v3
+v 636 v4
+e e2 638 637
+e e3 637 636
+}
+
+Instance 85 {
+v 635 v1
+v 634 v2
+v 890 v3
+v 633 v4
+e e1 635 634
+e e2 634 890
+e e3 890 633
+}
+
+Instance 84 {
+v 820 v1
+v 796 v2
+v 632 v3
+v 631 v4
+e e1 820 796
+e e2 796 632
+e e3 632 631
+}
+
+Instance 83 {
+% Deviations from substructure:
+%
+%   delete vertex: v 329 v4
+%   delete edge:   e e3 330 329  (secondary)
+v 630 v1
+v 629 v2
+v 628 v3
+e e1 630 629
+e e2 629 628
+}
+
+Instance 82 {
+% Deviations from substructure:
+%
+%   delete vertex: v 918 v3
+%   delete edge:   e e3 750 325  (secondary)
+%   delete edge:   e e2 327 750  (secondary)
+%   delete vertex: v 325 v4  (secondary)
+v 627 v1
+v 913 v2
+e e1 627 913
+}
+
+Instance 81 {
+v 626 v1
+v 625 v2
+v 624 v3
+v 623 v4
+e e1 626 625
+e e2 625 624
+e e3 624 623
+}
+
+Instance 80 {
+v 630 v1
+v 622 v2
+v 949 v3
+v 621 v4
+e e1 630 622
+e e2 622 949
+e e3 949 621
+}
+
+Instance 79 {
+% Deviations from substructure:
+%
+%   delete edge:   e e2 579 314
+%   delete vertex: v 961 v3  (secondary)
+%   delete edge:   e e3 314 313
+%   delete vertex: v 313 v4  (secondary)
+v 722 v1
+v 977 v2
+e e1 722 977
+}
+
+Instance 78 {
+% Deviations from substructure:
+%
+%   delete vertex: v 311 v2
+%   delete edge:   e e2 311 310  (secondary)
+%   delete edge:   e e1 312 311  (secondary)
+%   delete vertex: v 312 v1  (secondary)
+v 945 v3
+v 620 v4
+e e3 945 620
+}
+
+Instance 77 {
+v 619 v1
+v 811 v2
+v 931 v3
+v 930 v4
+e e1 619 811
+e e2 811 931
+e e3 931 930
+}
+
+Instance 76 {
+% Deviations from substructure:
+%
+%   delete vertex: v 495 v2
+%   delete edge:   e e2 495 302  (secondary)
+%   delete edge:   e e1 304 495  (secondary)
+%   delete vertex: v 304 v1  (secondary)
+v 687 v3
+v 618 v4
+e e3 687 618
+}
+
+Instance 75 {
+v 617 v1
+v 616 v2
+v 615 v3
+v 938 v4
+e e1 617 616
+e e2 616 615
+e e3 615 938
+}
+
+Instance 74 {
+% Deviations from substructure:
+%
+%   delete edge:   e e3 658 177
+%   delete vertex: v 177 v4  (secondary)
+v 614 v1
+v 986 v2
+v 924 v3
+e e1 614 986
+e e2 986 924
+}
+
+Instance 73 {
+v 613 v1
+v 612 v2
+v 611 v3
+v 610 v4
+e e1 613 612
+e e2 612 611
+e e3 611 610
+}
+
+Instance 72 {
+v 609 v1
+v 608 v2
+v 607 v3
+v 636 v4
+e e1 609 608
+e e2 608 607
+e e3 607 636
+}
+
+Instance 71 {
+v 606 v1
+v 605 v2
+v 935 v3
+v 934 v4
+e e1 606 605
+e e2 605 935
+e e3 935 934
+}
+
+Instance 70 {
+% Deviations from substructure:
+%
+%   delete vertex: v 495 v2
+%   delete edge:   e e2 495 278  (secondary)
+%   delete edge:   e e1 432 495  (secondary)
+%   delete vertex: v 432 v1  (secondary)
+v 604 v3
+v 603 v4
+e e3 604 603
+}
+
+Instance 69 {
+% Deviations from substructure:
+%
+%   delete vertex: v 276 v1
+%   delete edge:   e e1 276 275  (secondary)
+v 602 v2
+v 601 v3
+v 600 v4
+e e2 602 601
+e e3 601 600
+}
+
+Instance 68 {
+v 599 v1
+v 598 v2
+v 597 v3
+v 596 v4
+e e1 599 598
+e e2 598 597
+e e3 597 596
+}
+
+Instance 67 {
+v 595 v1
+v 594 v2
+v 593 v3
+v 592 v4
+e e1 595 594
+e e2 594 593
+e e3 593 592
+}
+
+Instance 66 {
+% Deviations from substructure:
+%
+%   delete vertex: v 946 v2
+%   delete edge:   e e2 791 106  (secondary)
+%   delete edge:   e e1 264 791  (secondary)
+%   delete vertex: v 264 v1  (secondary)
+v 768 v3
+v 591 v4
+e e3 768 591
+}
+
+Instance 65 {
+v 590 v1
+v 589 v2
+v 588 v3
+v 587 v4
+e e1 590 589
+e e2 589 588
+e e3 588 587
+}
+
+Instance 64 {
+v 586 v1
+v 585 v2
+v 584 v3
+v 583 v4
+e e1 586 585
+e e2 585 584
+e e3 584 583
+}
+
+Instance 63 {
+v 582 v1
+v 581 v2
+v 580 v3
+v 579 v4
+e e1 582 581
+e e2 581 580
+e e3 580 579
+}
+
+Instance 62 {
+v 578 v1
+v 577 v2
+v 961 v3
+v 576 v4
+e e1 578 577
+e e2 577 961
+e e3 961 576
+}
+
+Instance 61 {
+v 575 v1
+v 574 v2
+v 573 v3
+v 572 v4
+e e1 575 574
+e e2 574 573
+e e3 573 572
+}
+
+Instance 60 {
+v 892 v1
+v 571 v2
+v 842 v3
+v 841 v4
+e e1 892 571
+e e2 571 842
+e e3 842 841
+}
+
+Instance 59 {
+v 570 v1
+v 569 v2
+v 985 v3
+v 984 v4
+e e1 570 569
+e e2 569 985
+e e3 985 984
+}
+
+Instance 58 {
+v 568 v1
+v 567 v2
+v 566 v3
+v 565 v4
+e e1 568 567
+e e2 567 566
+e e3 566 565
+}
+
+Instance 57 {
+v 951 v1
+v 950 v2
+v 564 v3
+v 563 v4
+e e1 951 950
+e e2 950 564
+e e3 564 563
+}
+
+Instance 56 {
+v 562 v1
+v 561 v2
+v 560 v3
+v 952 v4
+e e1 562 561
+e e2 561 560
+e e3 560 952
+}
+
+Instance 55 {
+v 559 v1
+v 558 v2
+v 557 v3
+v 556 v4
+e e1 559 558
+e e2 558 557
+e e3 557 556
+}
+
+Instance 54 {
+v 743 v1
+v 834 v2
+v 833 v3
+v 555 v4
+e e1 743 834
+e e2 834 833
+e e3 833 555
+}
+
+Instance 53 {
+% Deviations from substructure:
+%
+%   delete vertex: v 852 v1
+%   delete edge:   e e1 852 211  (secondary)
+v 746 v2
+v 554 v3
+v 741 v4
+e e2 746 554
+e e3 554 741
+}
+
+Instance 52 {
+% Deviations from substructure:
+%
+%   delete vertex: v 788 v3
+%   delete edge:   e e3 590 205  (secondary)
+%   delete edge:   e e2 207 590  (secondary)
+%   delete vertex: v 205 v4  (secondary)
+v 872 v1
+v 553 v2
+e e1 872 553
+}
+
+Instance 51 {
+% Deviations from substructure:
+%
+%   delete edge:   e e1 204 203
+%   delete vertex: v 652 v1  (secondary)
+v 638 v2
+v 552 v3
+v 551 v4
+e e2 638 552
+e e3 552 551
+}
+
+Instance 50 {
+v 550 v1
+v 602 v2
+v 945 v3
+v 944 v4
+e e1 550 602
+e e2 602 945
+e e3 945 944
+}
+
+Instance 49 {
+v 549 v1
+v 638 v2
+v 548 v3
+v 547 v4
+e e1 549 638
+e e2 638 548
+e e3 548 547
+}
+
+Instance 48 {
+v 546 v1
+v 545 v2
+v 697 v3
+v 544 v4
+e e1 546 545
+e e2 545 697
+e e3 697 544
+}
+
+Instance 47 {
+v 652 v1
+v 543 v2
+v 542 v3
+v 541 v4
+e e1 652 543
+e e2 543 542
+e e3 542 541
+}
+
+Instance 46 {
+% Deviations from substructure:
+%
+%   delete edge:   e e1 184 183
+%   delete vertex: v 184 v1  (secondary)
+v 540 v2
+v 539 v3
+v 538 v4
+e e2 540 539
+e e3 539 538
+}
+
+Instance 45 {
+% Deviations from substructure:
+%
+%   delete edge:   e e3 658 177
+%   delete vertex: v 177 v4  (secondary)
+v 537 v1
+v 536 v2
+v 924 v3
+e e1 537 536
+e e2 536 924
+}
+
+Instance 44 {
+v 535 v1
+v 534 v2
+v 683 v3
+v 682 v4
+e e1 535 534
+e e2 534 683
+e e3 683 682
+}
+
+Instance 43 {
+v 533 v1
+v 532 v2
+v 531 v3
+v 530 v4
+e e1 533 532
+e e2 532 531
+e e3 531 530
+}
+
+Instance 42 {
+v 716 v1
+v 715 v2
+v 764 v3
+v 763 v4
+e e1 716 715
+e e2 715 764
+e e3 764 763
+}
+
+Instance 41 {
+v 529 v1
+v 528 v2
+v 527 v3
+v 526 v4
+e e1 529 528
+e e2 528 527
+e e3 527 526
+}
+
+Instance 40 {
+% Deviations from substructure:
+%
+%   delete vertex: v 159 v2
+%   delete edge:   e e2 159 794  (secondary)
+%   delete edge:   e e1 160 159  (secondary)
+%   delete vertex: v 160 v1  (secondary)
+v 525 v3
+v 524 v4
+e e3 525 524
+}
+
+Instance 39 {
+v 523 v1
+v 522 v2
+v 521 v3
+v 520 v4
+e e1 523 522
+e e2 522 521
+e e3 521 520
+}
+
+Instance 38 {
+v 519 v1
+v 518 v2
+v 517 v3
+v 516 v4
+e e1 519 518
+e e2 518 517
+e e3 517 516
+}
+
+Instance 37 {
+v 515 v1
+v 811 v2
+v 931 v3
+v 514 v4
+e e1 515 811
+e e2 811 931
+e e3 931 514
+}
+
+Instance 36 {
+v 722 v1
+v 513 v2
+v 989 v3
+v 988 v4
+e e1 722 513
+e e2 513 989
+e e3 989 988
+}
+
+Instance 35 {
+v 512 v1
+v 511 v2
+v 510 v3
+v 509 v4
+e e1 512 511
+e e2 511 510
+e e3 510 509
+}
+
+Instance 34 {
+v 508 v1
+v 507 v2
+v 506 v3
+v 926 v4
+e e1 508 507
+e e2 507 506
+e e3 506 926
+}
+
+Instance 33 {
+% Deviations from substructure:
+%
+%   delete vertex: v 548 v1
+%   delete edge:   e e1 548 547  (secondary)
+v 762 v2
+v 683 v3
+v 926 v4
+e e2 762 683
+e e3 683 926
+}
+
+Instance 32 {
+v 505 v1
+v 504 v2
+v 503 v3
+v 502 v4
+e e1 505 504
+e e2 504 503
+e e3 503 502
+}
+
+Instance 31 {
+v 501 v1
+v 543 v2
+v 500 v3
+v 499 v4
+e e1 501 543
+e e2 543 500
+e e3 500 499
+}
+
+Instance 30 {
+v 498 v1
+v 497 v2
+v 637 v3
+v 636 v4
+e e1 498 497
+e e2 497 637
+e e3 637 636
+}
+
+Instance 29 {
+v 496 v1
+v 707 v2
+v 996 v3
+v 495 v4
+e e1 496 707
+e e2 707 996
+e e3 996 495
+}
+
+Instance 28 {
+v 494 v1
+v 493 v2
+v 492 v3
+v 491 v4
+e e1 494 493
+e e2 493 492
+e e3 492 491
+}
+
+Instance 27 {
+v 490 v1
+v 489 v2
+v 768 v3
+v 767 v4
+e e1 490 489
+e e2 489 768
+e e3 768 767
+}
+
+Instance 26 {
+v 488 v1
+v 487 v2
+v 939 v3
+v 938 v4
+e e1 488 487
+e e2 487 939
+e e3 939 938
+}
+
+Instance 25 {
+% Deviations from substructure:
+%
+%   delete vertex: v 788 v3
+%   delete edge:   e e3 590 685  (secondary)
+%   delete edge:   e e2 99 590  (secondary)
+%   delete vertex: v 656 v4  (secondary)
+v 486 v1
+v 485 v2
+e e1 486 485
+}
+
+Instance 24 {
+v 484 v1
+v 867 v2
+v 866 v3
+v 483 v4
+e e1 484 867
+e e2 867 866
+e e3 866 483
+}
+
+Instance 23 {
+v 482 v1
+v 481 v2
+v 480 v3
+v 479 v4
+e e1 482 481
+e e2 481 480
+e e3 480 479
+}
+
+Instance 22 {
+v 478 v1
+v 477 v2
+v 849 v3
+v 848 v4
+e e1 478 477
+e e2 477 849
+e e3 849 848
+}
+
+Instance 21 {
+v 476 v1
+v 475 v2
+v 474 v3
+v 473 v4
+e e1 476 475
+e e2 475 474
+e e3 474 473
+}
+
+Instance 20 {
+v 472 v1
+v 471 v2
+v 470 v3
+v 469 v4
+e e1 472 471
+e e2 471 470
+e e3 470 469
+}
+
+Instance 19 {
+% Deviations from substructure:
+%
+%   delete vertex: v 836 v1
+%   delete edge:   e e1 836 75  (secondary)
+v 468 v2
+v 467 v3
+v 466 v4
+e e2 468 467
+e e3 467 466
+}
+
+Instance 18 {
+v 465 v1
+v 698 v2
+v 697 v3
+v 464 v4
+e e1 465 698
+e e2 698 697
+e e3 697 464
+}
+
+Instance 17 {
+v 463 v1
+v 462 v2
+v 461 v3
+v 460 v4
+e e1 463 462
+e e2 462 461
+e e3 461 460
+}
+
+Instance 16 {
+v 459 v1
+v 843 v2
+v 842 v3
+v 458 v4
+e e1 459 843
+e e2 843 842
+e e3 842 458
+}
+
+Instance 15 {
+v 457 v1
+v 456 v2
+v 455 v3
+v 454 v4
+e e1 457 456
+e e2 456 455
+e e3 455 454
+}
+
+Instance 14 {
+v 453 v1
+v 452 v2
+v 931 v3
+v 451 v4
+e e1 453 452
+e e2 452 931
+e e3 931 451
+}
+
+Instance 13 {
+% Deviations from substructure:
+%
+%   delete vertex: v 788 v3
+%   delete edge:   e e3 590 685  (secondary)
+%   delete edge:   e e2 27 590  (secondary)
+%   delete vertex: v 656 v4  (secondary)
+v 450 v1
+v 449 v2
+e e1 450 449
+}
+
+Instance 12 {
+v 448 v1
+v 447 v2
+v 446 v3
+v 445 v4
+e e1 448 447
+e e2 447 446
+e e3 446 445
+}
+
+Instance 11 {
+v 444 v1
+v 443 v2
+v 442 v3
+v 441 v4
+e e1 444 443
+e e2 443 442
+e e3 442 441
+}
+
+Instance 10 {
+v 440 v1
+v 707 v2
+v 996 v3
+v 995 v4
+e e1 440 707
+e e2 707 996
+e e3 996 995
+}
+
+Instance 9 {
+v 947 v1
+v 986 v2
+v 985 v3
+v 439 v4
+e e1 947 986
+e e2 986 985
+e e3 985 439
+}
+
+Instance 8 {
+% Deviations from substructure:
+%
+%   delete vertex: v 836 v1
+%   delete edge:   e e1 836 511  (secondary)
+v 891 v2
+v 737 v3
+v 438 v4
+e e2 891 737
+e e3 737 438
+}
+
+Instance 7 {
+% Deviations from substructure:
+%
+%   delete vertex: v 26 v3
+%   delete edge:   e e3 26 25  (secondary)
+%   delete edge:   e e2 27 26  (secondary)
+%   delete vertex: v 25 v4  (secondary)
+v 450 v1
+v 449 v2
+e e1 450 449
+}
+
+Instance 6 {
+v 437 v1
+v 942 v2
+v 941 v3
+v 436 v4
+e e1 437 942
+e e2 942 941
+e e3 941 436
+}
+
+Instance 5 {
+v 435 v1
+v 434 v2
+v 433 v3
+v 432 v4
+e e1 435 434
+e e2 434 433
+e e3 433 432
+}
+
+Instance 4 {
+% Deviations from substructure:
+%
+%   delete vertex: v 918 v3
+%   delete edge:   e e3 750 13  (secondary)
+%   delete edge:   e e2 15 750  (secondary)
+%   delete vertex: v 13 v4  (secondary)
+v 431 v1
+v 430 v2
+e e1 431 430
+}
+
+Instance 3 {
+% Deviations from substructure:
+%
+%   delete vertex: v 735 v1
+%   delete edge:   e e1 735 734  (secondary)
+%   delete edge:   e e3 570 569
+%   delete vertex: v 569 v4  (secondary)
+v 734 v2
+v 776 v3
+e e2 734 776
+}
+
+Instance 2 {
+v 429 v1
+v 428 v2
+v 427 v3
+v 426 v4
+e e1 429 428
+e e2 428 427
+e e3 427 426
+}
+
+Instance 1 {
+v 425 v1
+v 424 v2
+v 423 v3
+v 422 v4
+e e1 425 424
+e e2 424 423
+e e3 423 422
+}
