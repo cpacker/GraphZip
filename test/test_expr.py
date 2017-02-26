@@ -13,13 +13,10 @@ try:
 except:
     import pickle
 
-# from igraph import Graph
-
 from compressor.compress import Compressor
 from .utils import import_insts, parse_subdue_output
 
 
-# TODO move to settings.py file or alternative (ConfigParser, YAML)
 DEBUG = True  # enable for debug print output
 SAVE = False  # save the SVGs from each example
 PROFILE = False
@@ -27,6 +24,7 @@ PROFILE = False
 GRAPH_DIR = "data/"  # root dir for graph (eg. *.g, *.graph) files
 IMAGE_DIR = "images/"  # root dir for SVG images
 SUBDUE_DIR = "../SUBDUE/subdue-5.2.2/bin/"  # location of SUBDUE exe
+SUBGEN_DIR = "data/SUBGEN/"  # location of SUBGEN .graph and .insts files
 
 
 def get_gt_patterns_found(groundtruth, patterns):
@@ -245,110 +243,110 @@ class TestGraphZipSubgen(unittest.TestCase):
 
     def test_3CLIQ_20(self):
         print('20pc coverage:')
-        self._test_multiple("../../SUBGEN/subgen/3CLIQ/3CLIQ_1_5_20cx.graph",
-                            "../../SUBGEN/subgen/3CLIQ/3CLIQ_1_5_20c.insts",
+        self._test_multiple("%s3CLIQ/3CLIQ_1_5_20cx.graph" % SUBGEN_DIR,
+                            "%s3CLIQ/3CLIQ_1_5_20c.insts" % SUBGEN_DIR,
                             1)
 
     def test_3CLIQ_50(self):
         print('50pc coverage:')
-        self._test_multiple("../../SUBGEN/subgen/3CLIQ/3CLIQ_1_5_50cx.graph",
-                            "../../SUBGEN/subgen/3CLIQ/3CLIQ_1_5_50c.insts",
+        self._test_multiple("%s3CLIQ/3CLIQ_1_5_50cx.graph" % SUBGEN_DIR,
+                            "%s3CLIQ/3CLIQ_1_5_50c.insts" % SUBGEN_DIR,
                             1)
 
     def test_3CLIQ_80(self):
         print('80pc coverage:')
-        self._test_multiple("../../SUBGEN/subgen/3CLIQ/3CLIQ_1_5_80cx.graph",
-                            "../../SUBGEN/subgen/3CLIQ/3CLIQ_1_5_80c.insts",
-                            1)
-
-    def test_3PATH_20(self):
-        print('20pc coverage:')
-        self._test_multiple("../../SUBGEN/subgen/3PATH/3PATH_1_5_20cx.graph",
-                            "../../SUBGEN/subgen/3PATH/3PATH_1_5_20c.insts",
-                            1)
-
-    def test_3PATH_50(self):
-        print('50pc coverage:')
-        self._test_multiple("../../SUBGEN/subgen/3PATH/3PATH_1_5_50cx.graph",
-                            "../../SUBGEN/subgen/3PATH/3PATH_1_5_50c.insts",
-                            1)
-
-    def test_3PATH_80(self):
-        print('80pc coverage:')
-        self._test_multiple("../../SUBGEN/subgen/3PATH/3PATH_1_5_80cx.graph",
-                            "../../SUBGEN/subgen/3PATH/3PATH_1_5_80c.insts",
-                            1)
-
-    def test_3STAR_20(self):
-        print('20pc coverage:')
-        self._test_multiple("../../SUBGEN/subgen/3STAR/3STAR_1_5_20cx.graph",
-                            "../../SUBGEN/subgen/3STAR/3STAR_1_5_20c.insts",
-                            1)
-
-    def test_3STAR_50(self):
-        print('50pc coverage:')
-        self._test_multiple("../../SUBGEN/subgen/3STAR/3STAR_1_5_50cx.graph",
-                            "../../SUBGEN/subgen/3STAR/3STAR_1_5_50c.insts",
-                            1)
-
-    def test_3STAR_80(self):
-        print('80pc coverage:')
-        self._test_multiple("../../SUBGEN/subgen/3STAR/3STAR_1_5_80cx.graph",
-                            "../../SUBGEN/subgen/3STAR/3STAR_1_5_80c.insts",
+        self._test_multiple("%s3CLIQ/3CLIQ_1_5_80cx.graph" % SUBGEN_DIR,
+                            "%s3CLIQ/3CLIQ_1_5_80c.insts" % SUBGEN_DIR,
                             1)
 
     def test_4PATH_20(self):
         print('20pc coverage:')
-        self._test_multiple("../../SUBGEN/subgen/4PATH/4PATH_1_5_20cx.graph",
-                            "../../SUBGEN/subgen/4PATH/4PATH_1_5_20c.insts",
+        self._test_multiple("%s4PATH/4PATH_1_5_20cx.graph" % SUBGEN_DIR,
+                            "%s4PATH/4PATH_1_5_20c.insts" % SUBGEN_DIR,
                             1)
 
     def test_4PATH_50(self):
         print('50pc coverage:')
-        self._test_multiple("../../SUBGEN/subgen/4PATH/4PATH_1_5_50cx.graph",
-                            "../../SUBGEN/subgen/4PATH/4PATH_1_5_50c.insts",
+        self._test_multiple("%s4PATH/4PATH_1_5_50cx.graph" % SUBGEN_DIR,
+                            "%s4PATH/4PATH_1_5_50c.insts" % SUBGEN_DIR,
                             1)
 
     def test_4PATH_80(self):
         print('80pc coverage:')
-        self._test_multiple("../../SUBGEN/subgen/4PATH/4PATH_1_5_80cx.graph",
-                            "../../SUBGEN/subgen/4PATH/4PATH_1_5_80c.insts",
+        self._test_multiple("%s4PATH/4PATH_1_5_80cx.graph" % SUBGEN_DIR,
+                            "%s4PATH/4PATH_1_5_80c.insts" % SUBGEN_DIR,
                             1)
 
-    def test_7TREE_20(self):
+    def test_4STAR_20(self):
         print('20pc coverage:')
-        self._test_multiple("../../SUBGEN/subgen/7TREE/7TREE_1_5_20cx.graph",
-                            "../../SUBGEN/subgen/7TREE/7TREE_1_5_20c.insts",
+        self._test_multiple("%s4STAR/4STAR_1_5_20cx.graph" % SUBGEN_DIR,
+                            "%s4STAR/4STAR_1_5_20c.insts" % SUBGEN_DIR,
                             1)
 
-    def test_7TREE_50(self):
+    def test_4STAR_50(self):
         print('50pc coverage:')
-        self._test_multiple("../../SUBGEN/subgen/7TREE/7TREE_1_5_50cx.graph",
-                            "../../SUBGEN/subgen/7TREE/7TREE_1_5_50c.insts",
+        self._test_multiple("%s4STAR/4STAR_1_5_50cx.graph" % SUBGEN_DIR,
+                            "%s4STAR/4STAR_1_5_50c.insts" % SUBGEN_DIR,
                             1)
 
-    def test_7TREE_80(self):
+    def test_4STAR_80(self):
         print('80pc coverage:')
-        self._test_multiple("../../SUBGEN/subgen/7TREE/7TREE_1_5_80cx.graph",
-                            "../../SUBGEN/subgen/7TREE/7TREE_1_5_80c.insts",
+        self._test_multiple("%s4STAR/4STAR_1_5_80cx.graph" % SUBGEN_DIR,
+                            "%s4STAR/4STAR_1_5_80c.insts" % SUBGEN_DIR,
+                            1)
+
+    def test_5PATH_20(self):
+        print('20pc coverage:')
+        self._test_multiple("%s5PATH/5PATH_1_5_20cx.graph" % SUBGEN_DIR,
+                            "%s5PATH/5PATH_1_5_20c.insts" % SUBGEN_DIR,
+                            1)
+
+    def test_5PATH_50(self):
+        print('50pc coverage:')
+        self._test_multiple("%s5PATH/5PATH_1_5_50cx.graph" % SUBGEN_DIR,
+                            "%s5PATH/5PATH_1_5_50c.insts" % SUBGEN_DIR,
+                            1)
+
+    def test_5PATH_80(self):
+        print('80pc coverage:')
+        self._test_multiple("%s5PATH/5PATH_1_5_80cx.graph" % SUBGEN_DIR,
+                            "%s5PATH/5PATH_1_5_80c.insts" % SUBGEN_DIR,
+                            1)
+
+    def test_8TREE_20(self):
+        print('20pc coverage:')
+        self._test_multiple("%s8TREE/8TREE_1_5_20cx.graph" % SUBGEN_DIR,
+                            "%s8TREE/8TREE_1_5_20c.insts" % SUBGEN_DIR,
+                            1)
+
+    def test_8TREE_50(self):
+        print('50pc coverage:')
+        self._test_multiple("%s8TREE/8TREE_1_5_50cx.graph" % SUBGEN_DIR,
+                            "%s8TREE/8TREE_1_5_50c.insts" % SUBGEN_DIR,
+                            1)
+
+    def test_8TREE_80(self):
+        print('80pc coverage:')
+        self._test_multiple("%s8TREE/8TREE_1_5_80cx.graph" % SUBGEN_DIR,
+                            "%s8TREE/8TREE_1_5_80c.insts" % SUBGEN_DIR,
                             1)
 
     def test_4CLIQ_20(self):
         print('20pc coverage:')
-        self._test_multiple("../../SUBGEN/subgen/4CLIQ/4CLIQ_1_5_20cx.graph",
-                            "../../SUBGEN/subgen/4CLIQ/4CLIQ_1_5_20c.insts",
+        self._test_multiple("%s4CLIQ/4CLIQ_1_5_20cx.graph" % SUBGEN_DIR,
+                            "%s4CLIQ/4CLIQ_1_5_20c.insts" % SUBGEN_DIR,
                             1)
 
     def test_4CLIQ_50(self):
         print('50pc coverage:')
-        self._test_multiple("../../SUBGEN/subgen/4CLIQ/4CLIQ_1_5_50cx.graph",
-                            "../../SUBGEN/subgen/4CLIQ/4CLIQ_1_5_50c.insts",
+        self._test_multiple("%s4CLIQ/4CLIQ_1_5_50cx.graph" % SUBGEN_DIR,
+                            "%s4CLIQ/4CLIQ_1_5_50c.insts" % SUBGEN_DIR,
                             1)
 
     def test_4CLIQ_80(self):
         print('80pc coverage:')
-        self._test_multiple("../../SUBGEN/subgen/4CLIQ/4CLIQ_1_5_80cx.graph",
-                            "../../SUBGEN/subgen/4CLIQ/4CLIQ_1_5_80c.insts",
+        self._test_multiple("%s4CLIQ/4CLIQ_1_5_80cx.graph" % SUBGEN_DIR,
+                            "%s4CLIQ/4CLIQ_1_5_80c.insts" % SUBGEN_DIR,
                             1)
 
 
@@ -408,93 +406,93 @@ class TestSubdueSubgen(unittest.TestCase):
 
     def test_3CLIQ_20(self):
         print('20pc coverage:')
-        self._test_subdue_subgen("../../SUBGEN/subgen/3CLIQ/3CLIQ_1_5_20cx.graph",
-                                 "../../SUBGEN/subgen/3CLIQ/3CLIQ_1_5_20c.insts")
+        self._test_subdue_subgen("%s3CLIQ/3CLIQ_1_5_20cx.graph" % SUBGEN_DIR,
+                                 "%s3CLIQ/3CLIQ_1_5_20c.insts" % SUBGEN_DIR)
 
     def test_3CLIQ_50(self):
         print('50pc coverage:')
-        self._test_subdue_subgen("../../SUBGEN/subgen/3CLIQ/3CLIQ_1_5_50cx.graph",
-                                 "../../SUBGEN/subgen/3CLIQ/3CLIQ_1_5_50c.insts")
+        self._test_subdue_subgen("%s3CLIQ/3CLIQ_1_5_50cx.graph" % SUBGEN_DIR,
+                                 "%s3CLIQ/3CLIQ_1_5_50c.insts" % SUBGEN_DIR)
 
     def test_3CLIQ_80(self):
         print('80pc coverage:')
-        self._test_subdue_subgen("../../SUBGEN/subgen/3CLIQ/3CLIQ_1_5_80cx.graph",
-                                 "../../SUBGEN/subgen/3CLIQ/3CLIQ_1_5_80c.insts")
-
-    def test_3PATH_20(self):
-        print('20pc coverage:')
-        self._test_subdue_subgen("../../SUBGEN/subgen/3PATH/3PATH_1_5_20cx.graph",
-                                 "../../SUBGEN/subgen/3PATH/3PATH_1_5_20c.insts")
-
-    def test_3PATH_50(self):
-        print('50pc coverage:')
-        self._test_subdue_subgen("../../SUBGEN/subgen/3PATH/3PATH_1_5_50cx.graph",
-                                 "../../SUBGEN/subgen/3PATH/3PATH_1_5_50c.insts")
-
-    def test_3PATH_80(self):
-        print('80pc coverage:')
-        self._test_subdue_subgen("../../SUBGEN/subgen/3PATH/3PATH_1_5_80cx.graph",
-                                 "../../SUBGEN/subgen/3PATH/3PATH_1_5_80c.insts")
-
-    def test_3STAR_20(self):
-        print('20pc coverage:')
-        self._test_subdue_subgen("../../SUBGEN/subgen/3STAR/3STAR_1_5_20cx.graph",
-                                 "../../SUBGEN/subgen/3STAR/3STAR_1_5_20c.insts")
-
-    def test_3STAR_50(self):
-        print('50pc coverage:')
-        self._test_subdue_subgen("../../SUBGEN/subgen/3STAR/3STAR_1_5_50cx.graph",
-                                 "../../SUBGEN/subgen/3STAR/3STAR_1_5_50c.insts")
-
-    def test_3STAR_80(self):
-        print('80pc coverage:')
-        self._test_subdue_subgen("../../SUBGEN/subgen/3STAR/3STAR_1_5_80cx.graph",
-                                 "../../SUBGEN/subgen/3STAR/3STAR_1_5_80c.insts")
+        self._test_subdue_subgen("%s3CLIQ/3CLIQ_1_5_80cx.graph" % SUBGEN_DIR,
+                                 "%s3CLIQ/3CLIQ_1_5_80c.insts" % SUBGEN_DIR)
 
     def test_4PATH_20(self):
         print('20pc coverage:')
-        self._test_subdue_subgen("../../SUBGEN/subgen/4PATH/4PATH_1_5_20cx.graph",
-                                 "../../SUBGEN/subgen/4PATH/4PATH_1_5_20c.insts")
+        self._test_subdue_subgen("%s4PATH/4PATH_1_5_20cx.graph" % SUBGEN_DIR,
+                                 "%s4PATH/4PATH_1_5_20c.insts" % SUBGEN_DIR)
 
     def test_4PATH_50(self):
         print('50pc coverage:')
-        self._test_subdue_subgen("../../SUBGEN/subgen/4PATH/4PATH_1_5_50cx.graph",
-                                 "../../SUBGEN/subgen/4PATH/4PATH_1_5_50c.insts")
+        self._test_subdue_subgen("%s4PATH/4PATH_1_5_50cx.graph" % SUBGEN_DIR,
+                                 "%s4PATH/4PATH_1_5_50c.insts" % SUBGEN_DIR)
 
     def test_4PATH_80(self):
         print('80pc coverage:')
-        self._test_subdue_subgen("../../SUBGEN/subgen/4PATH/4PATH_1_5_80cx.graph",
-                                 "../../SUBGEN/subgen/4PATH/4PATH_1_5_80c.insts")
+        self._test_subdue_subgen("%s4PATH/4PATH_1_5_80cx.graph" % SUBGEN_DIR,
+                                 "%s4PATH/4PATH_1_5_80c.insts" % SUBGEN_DIR)
 
-    def test_7TREE_20(self):
+    def test_4STAR_20(self):
         print('20pc coverage:')
-        self._test_subdue_subgen("../../SUBGEN/subgen/7TREE/7TREE_1_5_20cx.graph",
-                                 "../../SUBGEN/subgen/7TREE/7TREE_1_5_20c.insts")
+        self._test_subdue_subgen("%s4STAR/4STAR_1_5_20cx.graph" % SUBGEN_DIR,
+                                 "%s4STAR/4STAR_1_5_20c.insts" % SUBGEN_DIR)
 
-    def test_7TREE_50(self):
+    def test_4STAR_50(self):
         print('50pc coverage:')
-        self._test_subdue_subgen("../../SUBGEN/subgen/7TREE/7TREE_1_5_50cx.graph",
-                                 "../../SUBGEN/subgen/7TREE/7TREE_1_5_50c.insts")
+        self._test_subdue_subgen("%s4STAR/4STAR_1_5_50cx.graph" % SUBGEN_DIR,
+                                 "%s4STAR/4STAR_1_5_50c.insts" % SUBGEN_DIR)
 
-    def test_7TREE_80(self):
+    def test_4STAR_80(self):
         print('80pc coverage:')
-        self._test_subdue_subgen("../../SUBGEN/subgen/7TREE/7TREE_1_5_80cx.graph",
-                                 "../../SUBGEN/subgen/7TREE/7TREE_1_5_80c.insts")
+        self._test_subdue_subgen("%s4STAR/4STAR_1_5_80cx.graph" % SUBGEN_DIR,
+                                 "%s4STAR/4STAR_1_5_80c.insts" % SUBGEN_DIR)
+
+    def test_5PATH_20(self):
+        print('20pc coverage:')
+        self._test_subdue_subgen("%s5PATH/5PATH_1_5_20cx.graph" % SUBGEN_DIR,
+                                 "%s5PATH/5PATH_1_5_20c.insts" % SUBGEN_DIR)
+
+    def test_5PATH_50(self):
+        print('50pc coverage:')
+        self._test_subdue_subgen("%s5PATH/5PATH_1_5_50cx.graph" % SUBGEN_DIR,
+                                 "%s5PATH/5PATH_1_5_50c.insts" % SUBGEN_DIR)
+
+    def test_5PATH_80(self):
+        print('80pc coverage:')
+        self._test_subdue_subgen("%s5PATH/5PATH_1_5_80cx.graph" % SUBGEN_DIR,
+                                 "%s5PATH/5PATH_1_5_80c.insts" % SUBGEN_DIR)
+
+    def test_8TREE_20(self):
+        print('20pc coverage:')
+        self._test_subdue_subgen("%s8TREE/8TREE_1_5_20cx.graph" % SUBGEN_DIR,
+                                 "%s8TREE/8TREE_1_5_20c.insts" % SUBGEN_DIR)
+
+    def test_8TREE_50(self):
+        print('50pc coverage:')
+        self._test_subdue_subgen("%s8TREE/8TREE_1_5_50cx.graph" % SUBGEN_DIR,
+                                 "%s8TREE/8TREE_1_5_50c.insts" % SUBGEN_DIR)
+
+    def test_8TREE_80(self):
+        print('80pc coverage:')
+        self._test_subdue_subgen("%s8TREE/8TREE_1_5_80cx.graph" % SUBGEN_DIR,
+                                 "%s8TREE/8TREE_1_5_80c.insts" % SUBGEN_DIR)
 
     def test_4CLIQ_20(self):
         print('20pc coverage:')
-        self._test_subdue_subgen("../../SUBGEN/subgen/4CLIQ/4CLIQ_1_5_20cx.graph",
-                                 "../../SUBGEN/subgen/4CLIQ/4CLIQ_1_5_20c.insts")
+        self._test_subdue_subgen("%s4CLIQ/4CLIQ_1_5_20cx.graph" % SUBGEN_DIR,
+                                 "%s4CLIQ/4CLIQ_1_5_20c.insts" % SUBGEN_DIR)
 
     def test_4CLIQ_50(self):
         print('50pc coverage:')
-        self._test_subdue_subgen("../../SUBGEN/subgen/4CLIQ/4CLIQ_1_5_50cx.graph",
-                                 "../../SUBGEN/subgen/4CLIQ/4CLIQ_1_5_50c.insts")
+        self._test_subdue_subgen("%s4CLIQ/4CLIQ_1_5_50cx.graph" % SUBGEN_DIR,
+                                 "%s4CLIQ/4CLIQ_1_5_50c.insts" % SUBGEN_DIR)
 
     def test_4CLIQ_80(self):
         print('80pc coverage:')
-        self._test_subdue_subgen("../../SUBGEN/subgen/4CLIQ/4CLIQ_1_5_80cx.graph",
-                                 "../../SUBGEN/subgen/4CLIQ/4CLIQ_1_5_80c.insts")
+        self._test_subdue_subgen("%s4CLIQ/4CLIQ_1_5_80cx.graph" % SUBGEN_DIR,
+                                 "%s4CLIQ/4CLIQ_1_5_80c.insts" % SUBGEN_DIR)
 
 
 @unittest.skip("Non-standard test")
