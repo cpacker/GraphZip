@@ -530,7 +530,7 @@ class TestLarge(unittest.TestCase):
         times = []
         try:
             for i in range(1, 99):
-                f = '../datasets/HetRec/hetrec_year_vfirst/%d.graph' % i
+                f = '%sHetRec/hetrec_year_vfirst/%d.graph' % (GRAPH_DIR, i)
                 start = timer()
                 self.c.compress_file(f)
                 end = timer()
@@ -560,7 +560,8 @@ class TestLarge(unittest.TestCase):
         try:
             for i in range(1, 169):
                 # f = '../datasets/Twitter_Higgs/higgs_hour_vfirst/%d.g' % i
-                f = '../datasets/Twitter_Higgs/higgs_hour_vfirst_unilabel/%d.g' % i
+                f = '%sTwitter_Higgs/higgs_hour_vfirst_unilabel/%d.g' %\
+                    (GRAPH_DIR, i)
                 start = timer()
                 self.c.compress_file(f)
                 end = timer()
@@ -590,7 +591,7 @@ class TestLarge(unittest.TestCase):
         times = []
         try:
             for i in range(1, 301):
-                f = '../datasets/NBER/cite75_99_month_clabels/%d.graph' % i
+                f = '%sNBER/cite75_99_month_clabels/%d.graph' % (GRAPH_DIR, i)
                 #f = '../datasets/NBER/cite75_99_month_clabels_v0/%d.graph' % i
                 # f = '../datasets/NBER/cite75_99_month_clabels_v0_vfirst/%d.graph' % i
                 start = timer()
