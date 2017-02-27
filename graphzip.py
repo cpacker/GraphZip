@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 """ Driver script to run GraphZip direct from the command-line
 
 ./python graphzip.py [-d] fileordirectoryname
