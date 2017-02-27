@@ -1,4 +1,4 @@
-Note: Repository is in the process of being updated.
+*Note: Repository is in the process of being updated.*
 
 # GraphZip
 
