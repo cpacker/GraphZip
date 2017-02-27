@@ -35,9 +35,9 @@ Run GraphZip on `test.graph` with a batch size of `5` and a dictionary size of `
 
 `python3 graphzip.py test.graph -a 5 -t 10`
 
-Run GraphZip on files `1.graph` through `100.graph` located in directory `test_graphs/`, using the default hyperparameters:
+Run GraphZip on files `1.graph` through `100.graph` located in directory `test_graphs/`, using a batch size of 5 and the default dictionary size:
 
-`python3 graphzip.py test_graphs -n 100 -a 5 -t 10`
+`python3 graphzip.py test_graphs -n 100 -a 5`
 
 ## Experiments
 
