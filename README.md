@@ -2,6 +2,8 @@
 
 # GraphZip
 
+GraphZip is a scalable method for mining interesting patterns in graph streams, based on the Lempel-Ziv class of compression algorithms.
+
 This repository contains a reference implementation of the GraphZip algorithm, written in Python.
 
 For more information, see our paper:
