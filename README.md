@@ -33,6 +33,17 @@ By default, the pattern dictionary is dumped to stdout - use `-o` to save it to 
 Using `-n NUM_FILES` turns on multi-file mode, and GraphZip will treat `graph_file` as a directory holding `NUM_FILES` sequential graph stream files, labelled `1.graph` to `[NUM_FILES].graph`.
 
 
+### Examples
+
+Run GraphZip on `test.graph` with a batch size of `5` and a dictionary size of `10`:
+
+`python3 graphzip.py test.graph -a 5 -t 10`
+
+Run GraphZip on files `1.graph` through `100.graph` located in directory `test_graphs/`, using a batch size of 5 and the default dictionary size:
+
+`python3 graphzip.py test_graphs -n 100 -a 5`
+
+
 ## File format
 
 The correct format for `.graph` files is:
@@ -58,15 +69,6 @@ Vertices must be defined prior to being referenced by an edge (or the vertex lab
 
 In the case of processing a graph stream over sequential `.graph` files, having `Compressor`'s `label_history_per_file` property set to `False` and `add_implicit_vertices` set to `True` (the default) allows edges to reference vertices declared in previous files. For further details see the inline comments.
 
-### Examples
-
-Run GraphZip on `test.graph` with a batch size of `5` and a dictionary size of `10`:
-
-`python3 graphzip.py test.graph -a 5 -t 10`
-
-Run GraphZip on files `1.graph` through `100.graph` located in directory `test_graphs/`, using a batch size of 5 and the default dictionary size:
-
-`python3 graphzip.py test_graphs -n 100 -a 5`
 
 ## Experiments
 
