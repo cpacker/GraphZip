@@ -5,6 +5,7 @@ import os
 import sys
 from collections import defaultdict
 from operator import itemgetter
+from sys import stderr
 try:
     import cPickle as pickle
 except:
@@ -162,7 +163,7 @@ class Compressor:
                                             edge_color1=G_batch.es['label'],
                                             edge_color2=p.es['label'])
             else:
-                print("Getting loose embeddings (no label match)")
+                print("Getting loose embeddings (no label match)", file=stderr)
                 maps = G_batch.get_subisomorphisms_vf2(p)
 
             # For each instance of i of p in B
@@ -285,7 +286,7 @@ class Compressor:
                 line_count += 1
                 if (line_count % 1000 == 0):
                     print("Read %d lines (%d edges) from %s" %
-                          (line_count, edge_count, fin), end='\r')
+                          (line_count, edge_count, fin), file=stderr, end='\r')
                 if line[0] == 'e':
                     edge_count += 1
 
@@ -304,8 +305,8 @@ class Compressor:
             if len(G_batch.es) > 0:
                 self.iterate_batch(G_batch)
 
-        print("Read %d lines (%d edges) from %s" %
-              (line_count, edge_count, fin), end='\r')  # final count
+        print("Read %d lines (%d edges) from %s" %  # final count
+              (line_count, edge_count, fin), file=stderr, end='\r')
 
         if self.label_history_per_file:
             # Wipe vid->label mapping
@@ -387,7 +388,8 @@ class Compressor:
                     self.safe_add_edge(G_batch,
                                        e_source_id, e_dest_id, label=e_label)
                 else:
-                    print("Error: vertex in line DNE:\n%s" % line_str)
+                    print("Error: vertex in line DNE:\n%s" % line_str,
+                          file=stderr)
                     raise
 
         else:
