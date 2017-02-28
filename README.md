@@ -23,9 +23,11 @@ Note: `python-igraph` is not to be confused with the `igraph` package (renamed t
 
 Run GraphZip directly from the command line with:
 
-`python3 graphzip.py graph_file [-n NUM_FILES] [-a ALPHA] [-t THETA]`
+`python3 graphzip.py graph_file [-n NUM_FILES] [-a ALPHA] [-t THETA] [-o OUTFILE]`
 
-Use flags `-a` and `-t` to set the batch size and dictionary size (hyperparameters of the GraphZip model)
+Use flags `-a` and `-t` to set the batch size and dictionary size (hyperparameters of the GraphZip model).
+
+By default, the pattern dictionary is dumped to stdout - use `-o` to save it to a file.
 
 Using `-n NUM_FILES` turns on multi-file mode, and GraphZip will treat `graph_file` as a directory holding `NUM_FILES` sequential graph stream files, labelled `1.graph` to `[NUM_FILES].graph`.
 
