@@ -28,9 +28,9 @@ Run GraphZip directly from the command line with:
 
 Use flags `-a` and `-t` to set the batch size and dictionary size (hyperparameters of the GraphZip model).
 
-By default, the pattern dictionary is dumped to stdout - use `-o` to save it to a file.
+By default, the pattern dictionary is dumped to stdout; use `-o` to save the dictionary to a specified file.
 
-Using `-n NUM_FILES` turns on multi-file mode, and GraphZip will treat `graph_file` as a directory holding `NUM_FILES` sequential graph stream files, labelled `1.graph` to `[NUM_FILES].graph`.
+Using `-n` turns on multi-file mode, and GraphZip will treat `graph_file` as a directory holding `NUM_FILES` sequential graph stream files, labelled `1.graph` to `[NUM_FILES].graph`.
 
 
 ### Examples
