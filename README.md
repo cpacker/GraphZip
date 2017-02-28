@@ -19,6 +19,7 @@ Once you have a working version of Python 3, install python-igraph with:
 
 Note: `python-igraph` is not to be confused with the `igraph` package (renamed to `jgraph`).
 
+
 ## Usage
 
 Run GraphZip directly from the command line with:
@@ -30,6 +31,32 @@ Use flags `-a` and `-t` to set the batch size and dictionary size (hyperparamete
 By default, the pattern dictionary is dumped to stdout - use `-o` to save it to a file.
 
 Using `-n NUM_FILES` turns on multi-file mode, and GraphZip will treat `graph_file` as a directory holding `NUM_FILES` sequential graph stream files, labelled `1.graph` to `[NUM_FILES].graph`.
+
+
+## File format
+
+The correct format for `.graph` files is:
+
+```
+% '%' to start comments
+v [vertex id (int)] [vertex label (int)]
+e [source vertex id (int)] [target vertex id (int)] [edge label (int)]
+```
+
+For example:
+```
+% example 3-clique with vertex labels "100", "999" and edge labels "1", "2", "3"
+v 1 100
+v 2 999
+v 3 100
+e 1 2 1
+e 1 3 2
+e 2 3 3
+```
+
+Vertices must be defined prior to being referenced by an edge (or the vertex label would be unknown).
+
+In the case of processing a graph stream over sequential `.graph` files, having `Compressor`'s `label_history_per_file` property set to `False` and `add_implicit_vertices` set to `True` (the default) allows edges to reference vertices declared in previous files. For further details see the inline comments.
 
 ### Examples
 
