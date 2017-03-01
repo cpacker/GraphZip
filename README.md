@@ -16,9 +16,7 @@ For more information, see our paper:
 Once you have a working version of Python 3, install python-igraph with:
 
 ```
-
 pip3 install python-igraph
-
 ```
 
 Note: `python-igraph` is not to be confused with the `igraph` package (renamed to `jgraph`).
