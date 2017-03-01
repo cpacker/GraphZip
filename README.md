@@ -15,7 +15,11 @@ For more information, see our paper:
 
 Once you have a working version of Python 3, install python-igraph with:
 
-`pip3 install python-igraph`
+```
+
+pip3 install python-igraph
+
+```
 
 Note: `python-igraph` is not to be confused with the `igraph` package (renamed to `jgraph`).
 
@@ -24,7 +28,11 @@ Note: `python-igraph` is not to be confused with the `igraph` package (renamed t
 
 Run GraphZip directly from the command line with:
 
-`python3 graphzip.py graph_file [-n NUM_FILES] [-a ALPHA] [-t THETA] [-o OUTFILE]`
+```
+
+python3 graphzip.py graph_file [-n NUM_FILES] [-a ALPHA] [-t THETA] [-o OUTFILE]
+
+```
 
 Use flags `-a` and `-t` to set the batch size and dictionary size (hyperparameters of the GraphZip model).
 
@@ -37,11 +45,19 @@ Using `-n` turns on multi-file mode, and GraphZip will treat `graph_file` as a d
 
 Run GraphZip on `test.graph` with a batch size of `5` and a dictionary size of `10`:
 
-`python3 graphzip.py test.graph -a 5 -t 10`
+```
+
+python3 graphzip.py test.graph -a 5 -t 10
+
+```
 
 Run GraphZip on files `1.graph` through `100.graph` located in directory `test_graphs/`, using a batch size of 5 and the default dictionary size:
 
-`python3 graphzip.py test_graphs -n 100 -a 5`
+```
+
+python3 graphzip.py test_graphs -n 100 -a 5
+
+```
 
 
 ## File format
@@ -76,15 +92,27 @@ Several example experiments are located in the unit tests directory under `tests
 
 Run the algorithm on several example graphs (located in `data/`) by navigating to the root project directory then running:
 
-`python3 -m unittest`
+```
+
+python3 -m unittest
+
+```
 
 To run a specific test use the format:
 
-`python3 -m unittest test.[test_file].[TestSuite].[test_function]`
+```
+
+python3 -m unittest test.[test_file].[TestSuite].[test_function]
+
+```
 
 For example, to run the 3-clique test located in the `TestGraphZipSubgen` suite:
 
-`python3 -m unittest test.test_expr.TestGraphZipSubgen.test_4PATH_20`
+```
+
+python3 -m unittest test.test_expr.TestGraphZipSubgen.test_4PATH_20
+
+```
 
 For details on specific examples, see the files under the `test/` directory.
 
