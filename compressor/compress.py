@@ -19,8 +19,11 @@ from .visualize import visualize_separate, visualize_grid
 class Compressor:
     """ Parameters and state of the GraphZip model """
 
-    def __init__(self, batch_size=10, dict_size=math.inf):
+    def __init__(self, batch_size=10, dict_size=math.inf, directed=False):
         """ Initialize state and set parameters """
+        # Should remain constant
+        self._directed = directed
+
         # For keeping track of internal stats
         self._compress_count = 0
         self._lines_read = 0
@@ -261,7 +264,7 @@ class Compressor:
             if e not in taken:
                 source = G_batch.vs[e.source]
                 target = G_batch.vs[e.target]
-                single_edge = Graph()
+                single_edge = Graph(directed=self._directed)
                 # Don't need the safe methods here since it's a fresh graph
                 single_edge.add_vertex(label=source['label'])
                 single_edge.add_vertex(label=target['label'])
@@ -278,7 +281,7 @@ class Compressor:
         self._compress_count += 1
 
         with open(fin, 'r') as f:
-            G_batch = Graph()
+            G_batch = Graph(directed=self._directed)
             line_count = 0
             edge_count = 0
 
@@ -299,7 +302,7 @@ class Compressor:
 
                 # Processed the batch, then create a fresh stream object/graph
                 self.iterate_batch(G_batch)
-                G_batch = Graph()
+                G_batch = Graph(directed=self._directed)
 
             # Process the leftovers (if any)
             if len(G_batch.es) > 0:

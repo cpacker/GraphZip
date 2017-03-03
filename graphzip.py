@@ -27,6 +27,10 @@ if __name__ == '__main__':
                         help="Searches for files in directory graph_file",
                         type=int)
 
+    parser.add_argument("-d", "--directed",
+                        help="Assume directed graph",
+                        action='store_true')
+
     parser.add_argument("-a", "--alpha",
                         help="Batch size (default 10)",
                         type=int)
@@ -45,6 +49,13 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
+    if args.directed:
+        use_directed = True
+        print("directed")
+    else:
+        use_directed = False
+        print("undirected")
+
     # Check range of alpha and theta
     if args.alpha is not None and args.alpha <= 0:
             print("Error: alpha must be > 0", file=stderr)
@@ -56,13 +67,17 @@ if __name__ == '__main__':
 
     # Initialize model state
     if not args.alpha and not args.theta:
-        model = Compressor()
+        model = Compressor(directed=use_directed)
     elif not args.alpha and args.theta is not None:
-        model = Compressor(dict_size=args.theta)
+        model = Compressor(dict_size=args.theta,
+                           directed=use_directed)
     elif args.alpha is not None and not args.theta:
-        model = Compressor(batch_size=args.alpha)
+        model = Compressor(batch_size=args.alpha,
+                           directed=use_directed)
     else:
-        model = Compressor(batch_size=args.alpha, dict_size=args.theta)
+        model = Compressor(batch_size=args.alpha,
+                           dict_size=args.theta,
+                           directed=use_directed)
 
     # Compress multiple files (graph stream sequence) in a directory
     if args.num_files is not None:
