@@ -1,6 +1,7 @@
 *Note: Repository is in the process of being updated.*
 
 # GraphZip
+## Dictionary-based Compression for Mining Graph Streams
 
 GraphZip is a scalable method for mining interesting patterns in graph streams, based on the Lempel-Ziv class of compression algorithms.
 
