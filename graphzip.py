@@ -120,9 +120,9 @@ if __name__ == '__main__':
             try:
                 model.compress_file(filename)
                 # Option to print dictionary at every iteration
-                print("\n\nDictionary after processing %d.graph:" % i,
-                      file=stderr)
-                write_dictionary(model)
+                # print("\n\nDictionary after processing %d.graph:" % i,
+                #       file=stderr)
+                # write_dictionary(model)
             except IOError:
                 print("Error: unable to open file %s" % filename, file=stderr)
                 exit(1)
