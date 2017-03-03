@@ -37,8 +37,8 @@ $ python graphzip.py graph_file [-n NUM_FILES] [-d] [-a ALPHA] [-t THETA] [-o OU
 # Run GraphZip on `test.graph` with a batch size of `5` and a dictionary size of `10`:
 python graphzip.py test.graph -a 5 -t 10
 
-Run GraphZip on files `1.graph` through `100.graph` located in directory `test_graphs/`, using a batch size of 5 and the default dictionary size:
-$ python graphzip.py test_graphs -n 100 -a 5
+# Run GraphZip on files `1.graph` through `100.graph` located in directory `test_graphs/`, using a batch size of 5 and the default dictionary size:
+python graphzip.py test_graphs -n 100 -a 5
 ```
 
 
@@ -62,7 +62,7 @@ Batch size and dictionary size, respectively (hyperparameters of the GraphZip mo
 By default, the pattern dictionary is dumped to stdout; use `-o` to save the dictionary to a specified file.
 
 
-### File format
+## File format
 
 The correct format for `.graph` files is:
 
@@ -126,4 +126,4 @@ bibtex
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.txt) file for details
+MIT License - see [LICENSE.txt](LICENSE.txt) for details.
