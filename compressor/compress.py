@@ -307,7 +307,7 @@ class Compressor:
                 self.parse_line(line, G_batch)
 
                 # Only process our "batch" once we've reached a certain size
-                if (if (edge_count == 0 or (edge_count % self.batch_size) != 0):
+                if (edge_count == 0 or (edge_count % self.batch_size) != 0):
                     continue
 
                 # Processed the batch, then create a fresh stream object/graph
