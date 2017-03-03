@@ -152,6 +152,10 @@ class Compressor:
             return
         taken = defaultdict(lambda: False)  # XXX move to under vmap in maps?
 
+        # Keep track of all the extended patterns
+        # then update dictionary at the end
+        new_patterns = []
+
         # For each pattern-graph p in P
         for p, c, s in self.P:
 
@@ -190,6 +194,8 @@ class Compressor:
 
                     # Check whether the equivalent node on the big graph has
                     # extra incident edges not on the dictionary pattern
+                    # XXX Incident takes keyword 'mode' when directed,
+                    #     defaults to only OUT edges (not ALL)
                     G_edges = G_batch.es[G_batch.incident(G_v)]
                     p_edges = p.es[p.incident(p_v)]
 
@@ -204,6 +210,7 @@ class Compressor:
                         #  if taken[Ge]:
                         #     continue
 
+                        # One of these should be the same as G_v
                         Gv_source_index = Ge.source
                         Gv_target_index = Ge.target
                         Gv_source = G_batch.vs[Gv_source_index]
@@ -257,7 +264,10 @@ class Compressor:
 
                 # Add the new pattern to the dictionary
                 if p_new is not None:
-                    self.update_dictionary(p_new)
+                    new_patterns.append(p_new)
+
+        for g in new_patterns:
+            self.update_dictionary(g)
 
         # Add remaining edges in B as single-edge patterns in P
         for e in G_batch.es:
@@ -297,7 +307,7 @@ class Compressor:
                 self.parse_line(line, G_batch)
 
                 # Only process our "batch" once we've reached a certain size
-                if (edge_count % self.batch_size != 0):
+                if (if (edge_count == 0 or (edge_count % self.batch_size) != 0):
                     continue
 
                 # Processed the batch, then create a fresh stream object/graph
