@@ -15,7 +15,7 @@ For more information, see our paper:
 
 Once you have a working version of Python 3, install python-igraph with:
 
-```
+```sh
 $ pip install python-igraph
 ```
 
@@ -26,33 +26,43 @@ Note: `python-igraph` is not to be confused with the `igraph` package (renamed t
 
 Run GraphZip directly from the command line with:
 
-```
+```sh
 $ python graphzip.py graph_file [-n NUM_FILES] [-d] [-a ALPHA] [-t THETA] [-o OUTFILE]
 ```
 
-Use flags `-a` and `-t` to set the batch size and dictionary size (hyperparameters of the GraphZip model). Using `-d` will make GraphZip read the graph file(s) as directed graphs.
 
-By default, the pattern dictionary is dumped to stdout; use `-o` to save the dictionary to a specified file.
+## Examples
 
-Using `-n` turns on multi-file mode, and GraphZip will treat `graph_file` as a directory holding `NUM_FILES` sequential graph stream files, labelled `1.graph` to `[NUM_FILES].graph`.
-
-
-### Examples
-
-Run GraphZip on `test.graph` with a batch size of `5` and a dictionary size of `10`:
-
-```
-$ python graphzip.py test.graph -a 5 -t 10
-```
+```sh
+# Run GraphZip on `test.graph` with a batch size of `5` and a dictionary size of `10`:
+python graphzip.py test.graph -a 5 -t 10
 
 Run GraphZip on files `1.graph` through `100.graph` located in directory `test_graphs/`, using a batch size of 5 and the default dictionary size:
-
-```
 $ python graphzip.py test_graphs -n 100 -a 5
 ```
 
 
-## File format
+## Options
+
+##### `-n`, `--num_files`
+
+Using `-n` turns on multi-file mode, and GraphZip will treat `graph_file` as a directory holding `NUM_FILES` sequential graph stream files, labelled `1.graph` to `[NUM_FILES].graph`.
+
+##### `-d`, `--directed`
+
+Using `-d` will make GraphZip read the graph file(s) as directed graphs.
+
+##### `-a`, `--alpha`
+##### `-t`, `--theta`
+
+Batch size and dictionary size, respectively (hyperparameters of the GraphZip model).
+
+##### `-0`, `--outfile`
+
+By default, the pattern dictionary is dumped to stdout; use `-o` to save the dictionary to a specified file.
+
+
+### File format
 
 The correct format for `.graph` files is:
 
@@ -84,19 +94,19 @@ Several example experiments are located in the unit tests directory under `tests
 
 Run the algorithm on several example graphs (located in `data/`) by navigating to the root project directory then running:
 
-```
+```sh
 $ python -m unittest
 ```
 
 To run a specific test use the format:
 
-```
+```sh
 $ python -m unittest test.[test_file].[TestSuite].[test_function]
 ```
 
 For example, to run the 3-clique test located in the `TestGraphZipSubgen` suite:
 
-```
+```sh
 $ python -m unittest test.test_expr.TestGraphZipSubgen.test_4PATH_20
 ```
 
