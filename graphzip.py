@@ -43,9 +43,9 @@ if __name__ == '__main__':
                         help="Save patterns to file (default stdout)",
                         type=str)
 
-    parser.add_argument("-v", "--verbose",
-                        help="Print debug to stdout",
-                        action='store_true')
+    # parser.add_argument("-v", "--verbose",
+    #                     help="Print debug to stdout",
+    #                     action='store_true')
 
     args = parser.parse_args()
 
