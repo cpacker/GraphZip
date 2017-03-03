@@ -38,6 +38,9 @@ class Compressor:
         # True if we don't just want subisomorphisms, but strict subgraphs
         self.match_strict = True
 
+        # True if we want to parse multiedges from the input graph
+        self.allow_multiedges = True
+
         # True if we want to allow edges to be added without the vertices
         # being declared in the same batch
         # However, in order for the edge to be added, we still need the
@@ -119,6 +122,12 @@ class Compressor:
             Otherwise, add the new pattern to the dictionary
 
         """
+        # Debug XXX
+        print("\nUpdating dictionary with p:")
+        print(pattern)
+        print(pattern.vs['label'])
+        print(pattern.es['label'])
+
         c2 = pattern.vs['label']
         c2_edge = pattern.es['label']
 
@@ -151,6 +160,10 @@ class Compressor:
         if len(G_batch.es) == 0:
             return
         taken = defaultdict(lambda: False)  # XXX move to under vmap in maps?
+
+        # Keep track of all the extended patterns
+        # then update dictionary at the end
+        new_patterns = []
 
         # For each pattern-graph p in P
         for p, c, s in self.P:
@@ -190,6 +203,8 @@ class Compressor:
 
                     # Check whether the equivalent node on the big graph has
                     # extra incident edges not on the dictionary pattern
+                    # XXX Incident takes keyword 'mode' when directed,
+                    #     defaults to only OUT edges (not ALL)
                     G_edges = G_batch.es[G_batch.incident(G_v)]
                     p_edges = p.es[p.incident(p_v)]
 
@@ -206,6 +221,7 @@ class Compressor:
 
                         Gv_source_index = Ge.source
                         Gv_target_index = Ge.target
+                        # One of these should be the same as G_v
                         Gv_source = G_batch.vs[Gv_source_index]
                         Gv_target = G_batch.vs[Gv_target_index]
 
@@ -236,12 +252,21 @@ class Compressor:
                         # Second possibility is that both vertices exist, but
                         # the edge only exists in the larger (batch) graph
                         # e.g., closing a cycle
+                        # (loop has edge Ge)
                         else:
+                            # Both vertices exist in pattern AND batch
+                            # We know an edge between source and target exists
+                            # in B, but we don't know if it exists in p
                             pv_source_index = Gv_to_pv[Gv_source_index]
                             pv_target_index = Gv_to_pv[Gv_target_index]
 
-                            if not p.are_connected(pv_source_index,
-                                                   pv_target_index):
+                            # If we don't allow multi-edges, simply check if
+                            # the vertices are not yet connected in the
+                            # pattern, and if not, connect them
+                            if (not self.allow_multiedges and
+                                not p.are_connected(pv_source_index,
+                                                    pv_target_index)):
+                                # Only add the edge if it doesn't exist in p
                                 if p_new is None:
                                     p_new = p.copy()
                                 self.safe_add_edge(p_new,
@@ -249,15 +274,40 @@ class Compressor:
                                                    pv_target_index,
                                                    label=Ge['label'])
 
+                            # If we DO allow multi-edges, we want to ONLY add
+                            # the new edges NOT present on p
+                            # An easy way to do this is by removing all edges
+                            # between pv_source and pv_target, then adding
+                            # all the respective edges in B
+                            elif self.allow_multiedges:
+                                # If we allow multi-edges, we're going to add
+                                # the edge regardless
+                                if p_new is None:
+                                    p_new = p.copy()
+                                    # We only do the delete ONCE; the first
+                                    # time we hit a potential multi-edge
+                                    p_new.delete_edges(
+                                        p_new.es.select(
+                                            _between=([pv_source_index],
+                                                      [pv_target_index])))
+                                self.safe_add_edge(p_new,
+                                                   pv_source_index,
+                                                   pv_target_index,
+                                                   label=Ge['label'])
+
                         # Third possibility is that the edge exists in both the
                         # pattern and the larger (batch) graph (do nothing)
+                        # (Note: if multi-edges are allowed, see above)
 
                         # Mark the subgraph and the extra edge as taken
                         taken[Ge] = True
 
                 # Add the new pattern to the dictionary
                 if p_new is not None:
-                    self.update_dictionary(p_new)
+                    new_patterns.append(p_new)
+
+        for g in new_patterns:
+            self.update_dictionary(g)
 
         # Add remaining edges in B as single-edge patterns in P
         for e in G_batch.es:
@@ -297,7 +347,7 @@ class Compressor:
                 self.parse_line(line, G_batch)
 
                 # Only process our "batch" once we've reached a certain size
-                if (edge_count % self.batch_size != 0):
+                if (edge_count == 0 or (edge_count % self.batch_size) != 0):
                     continue
 
                 # Processed the batch, then create a fresh stream object/graph
@@ -315,13 +365,14 @@ class Compressor:
             # Wipe vid->label mapping
             self.vid_to_label = dict()
 
-    def safe_add_edge(self, graph, source, target, **kwds):
+    def safe_add_edge(self, graph, source, target, label, **kwds):
         """ Makes sure vertices are added to a graph before adding an edge
 
         iGraph wrapper function around graph.add_edge()
         Note: we still need the id->label mapping of the vertex to proceed
 
         """
+        print("Safe adding edge e %s %s %d" % (source, target, label))
         try:
             graph.vs.find(name=source)
         except ValueError:
@@ -332,9 +383,11 @@ class Compressor:
         except ValueError:
             graph.add_vertex(target, label=self.vid_to_label[target])
 
+        if self.allow_multiedges:
+            graph.add_edge(source, target, label=label, **kwds)
         # don't add duplicate edges
-        if not graph.are_connected(source, target):
-            graph.add_edge(source, target, **kwds)
+        elif not graph.are_connected(source, target):
+            graph.add_edge(source, target, label=label, **kwds)
 
     def parse_line(self, line_str, G_batch):
         """ Parse a line from .graph input and update the graph accordingly
@@ -370,27 +423,24 @@ class Compressor:
             e_type = raw[0]  # d=directed, u=undirected, e=directed unless flag
             e_source_id, e_dest_id, e_label = raw[1], raw[2], int(raw[3])
 
-            # Don't add an edge if it already exists
-            try:
-                if not G_batch.are_connected(e_source_id, e_dest_id):
-                    # We can only add an edge if the vertices already exist
-                    if self.add_implicit_vertices:
-                        self.safe_add_edge(G_batch,
-                                           e_source_id,
-                                           e_dest_id,
-                                           label=e_label)
-                    else:
+            if self.add_implicit_vertices:
+                self.safe_add_edge(G_batch,
+                                   e_source_id,
+                                   e_dest_id,
+                                   label=e_label)
+            else:
+                try:
+                    if self.allow_multiedges:
                         G_batch.add_edge(e_source_id,
                                          e_dest_id,
                                          label=e_label)
-
-            # Means that one of the vertices DNE (also not connected)
-            except ValueError:
-                # We can only add an edge if the vertices already exist
-                if self.add_implicit_vertices:
-                    self.safe_add_edge(G_batch,
-                                       e_source_id, e_dest_id, label=e_label)
-                else:
+                    # Don't add an edge if it already exists
+                    elif not G_batch.are_connected(e_source_id, e_dest_id):
+                        G_batch.add_edge(e_source_id,
+                                         e_dest_id,
+                                         label=e_label)
+                # Means that one of the vertices DNE (also not connected)
+                except ValueError:
                     print("Error: vertex in line DNE:\n%s" % line_str,
                           file=stderr)
                     raise
