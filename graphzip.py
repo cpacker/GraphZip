@@ -15,6 +15,34 @@ from sys import stderr
 from compressor.compress import Compressor
 
 
+def write_dictionary(model, fout=None):
+    """ Print the pattern dictionary in readable .graph format
+
+    If fout == None, print to stdout
+    Otherwise, write to fout/file
+
+    """
+    model.P = sorted(model.P, key=itemgetter(2), reverse=True)
+    for i, (g, c, s) in enumerate(model.P):
+        if fout is None:
+            print("%% Pattern %d" % (i + 1))
+            print("%% Score:  %d" % s)
+            print("%% Count:  %d" % c)
+            for i, v in enumerate(g.vs):
+                print("v %d %d" % (i, v['label']))
+            for e in g.es:
+                print("e %d %d %d" % (e.source, e.target, e['label']))
+        else:
+            fout.write("%% Pattern %d\n" % i)
+            fout.write("%% Score:  %d\n" % s)
+            fout.write("%% Count:  %d\n" % c)
+            for i, v in enumerate(g.vs):
+                fout.write("v %d %d\n" % (i, v['label']))
+            for e in g.es:
+                fout.write("e %d %d %d\n" %
+                           (e.source, e.target, e['label']))
+
+
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
@@ -51,10 +79,10 @@ if __name__ == '__main__':
 
     if args.directed:
         use_directed = True
-        print("directed")
+        print("[directed]")
     else:
         use_directed = False
-        print("undirected")
+        print("[undirected]")
 
     # Check range of alpha and theta
     if args.alpha is not None and args.alpha <= 0:
@@ -91,6 +119,10 @@ if __name__ == '__main__':
             filename = "%s/%d.graph" % (graphs_dir, i)
             try:
                 model.compress_file(filename)
+                # Option to print dictionary at every iteration
+                print("\n\nDictionary after processing %d.graph:" % i,
+                      file=stderr)
+                write_dictionary(model)
             except IOError:
                 print("Error: unable to open file %s" % filename, file=stderr)
                 exit(1)
@@ -108,31 +140,14 @@ if __name__ == '__main__':
     if args.outfile is not None:
         try:
             with open(args.outfile, 'w') as fout:
-                model.P = sorted(model.P, key=itemgetter(2), reverse=True)
-                for i, (g, c, s) in enumerate(model.P):
-                    fout.write("%% Pattern %d\n" % i)
-                    fout.write("%% Score:  %d\n" % s)
-                    fout.write("%% Count:  %d\n" % c)
-                    for i, v in enumerate(g.vs):
-                        fout.write("v %d %d\n" % (i, v['label']))
-                    for e in g.es:
-                        fout.write("e %d %d %d\n" %
-                                   (e.source, e.target, e['label']))
+                write_dictionary(model, fout)
         except IOError:
             print("Error: unable to open file %s" % args.outfile, file=stderr)
             exit(1)
 
     # Writing to stdout
     else:
-        print("\nWriting pattern dictionary to stdout...\n", file=stderr)
-        model.P = sorted(model.P, key=itemgetter(2), reverse=True)
-        for i, (g, c, s) in enumerate(model.P):
-            print("%% Pattern %d" % i)
-            print("%% Score:  %d" % s)
-            print("%% Count:  %d" % c)
-            for i, v in enumerate(g.vs):
-                print("v %d %d" % (i, v['label']))
-            for e in g.es:
-                print("e %d %d %d" % (e.source, e.target, e['label']))
+        print("\nWriting final pattern dictionary to stdout...\n", file=stderr)
+        write_dictionary(model)
 
     print("\nDone.", file=stderr)
