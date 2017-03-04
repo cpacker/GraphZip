@@ -57,7 +57,7 @@ Using `-d` will make GraphZip read the graph file(s) as directed graphs.
 
 Batch size and dictionary size, respectively (hyperparameters of the GraphZip model).
 
-##### `-0`, `--outfile`
+##### `-o`, `--outfile`
 
 By default, the pattern dictionary is dumped to stdout; use `-o` to save the dictionary to a specified file.
 
