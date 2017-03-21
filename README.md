@@ -102,7 +102,7 @@ To run a specific test use the format:
 $ python -m unittest test.[test_file].[TestSuite].[test_function]
 ```
 
-For example, to run the 3-clique test located in the `TestGraphZipSubgen` suite:
+For example, to run the 4-clique test with 20% coverage located in the `TestGraphZipSubgen` suite:
 
 ```sh
 $ python -m unittest test.test_expr.TestGraphZipSubgen.test_4PATH_20
