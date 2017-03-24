@@ -83,7 +83,7 @@ e 2 3 3
 
 Vertices must be defined prior to being referenced by an edge (or the vertex label would be unknown).
 
-In the case of processing a graph stream over sequential `.graph` files, having `Compressor`'s `label_history_per_file` property set to `False` and `add_implicit_vertices` set to `True` (the default) allows edges to reference vertices declared in previous files. For further details see the inline comments.
+In the case of processing a graph stream over sequential `.graph` files, having `Compressor`'s `label_history_per_file` property set to `False` and `add_implicit_vertices` set to `True` (the default) allows edges to reference vertices declared in previous files. For further details see the [inline comments](https://github.com/cpacker/GraphZip/blob/master/compressor/compress.py).
 
 
 ## Experiments
