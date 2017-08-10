@@ -1,4 +1,4 @@
-# GraphZip: Dictionary-based Compression for Mining Graph Streams
+# GraphZip: Mining Graph Streams using Dictionary-based Compression
 
 GraphZip is a scalable method for mining interesting patterns in graph streams, based on the Lempel-Ziv class of compression algorithms.
 
@@ -109,17 +109,21 @@ $ python -m unittest test.test_expr.TestGraphZipSubgen.test_4PATH_20
 
 For details on specific examples, see the files under the `test/` directory.
 
-<!---
-## Citation Policy
+## Citations
 
-If you find our , please consider citing:
+If you find GraphZip useful in your research, please consider citing:
 
-> GraphZip: Dictionary-based Compression for Mining Graph Streams. Charles Packer, Lawrence Holder.
+> C. Packer and L. Holder, GraphZip: Mining Graph Streams using Dictionary-based
+Compression. SIGKDD Workshop on Mining and Learning in Graphs (MLG), August 2017.
 
+```bibtex
+@inproceedings{PacHol:mlg17,
+  title     = {{GraphZip}: Mining Graph Streams using Dictionary-based Compression},
+  author    = {Charles Packer and Larry Holder},
+  booktitle = {Proceedings of the 13th International Workshop on Mining and Learning with Graphs (MLG)},
+  year      = {2017}
+}
 ```
-bibtex
-```
---->
 
 ## License
 
