@@ -4,7 +4,7 @@ GraphZip is a scalable method for mining interesting patterns in graph streams, 
 
 This repository contains a reference implementation of the GraphZip algorithm, written in Python.
 
-For more detailed information regarding the algorithm, see our [paper](https://arxiv.org/pdf/1703.08614.pdf).
+For more detailed information regarding the algorithm, see our [paper](http://www.mlgworkshop.org/2017/paper/MLG2017_paper_18.pdf).
 
 ## Install
 
